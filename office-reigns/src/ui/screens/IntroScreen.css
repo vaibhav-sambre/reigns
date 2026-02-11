@@ -1,0 +1,225 @@
+.intro-screen {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.intro-content {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.intro-header {
+    margin-bottom: 2rem;
+}
+
+.intro-icon {
+    font-size: 4rem;
+    display: block;
+    margin-bottom: 1rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.intro-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0 0 0.5rem;
+    background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.intro-subtitle {
+    font-size: 1.25rem;
+    color: #94a3b8;
+    margin: 0;
+}
+
+.intro-persona {
+    margin-bottom: 2rem;
+}
+
+.intro-persona h2 {
+    font-size: 1.25rem;
+    color: #f1f5f9;
+    margin: 0 0 1rem;
+}
+
+.persona-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.persona-card {
+    background: rgba(30, 41, 59, 0.4);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #94a3b8;
+}
+
+.persona-card:hover {
+    background: rgba(30, 41, 59, 0.8);
+    transform: translateY(-2px);
+}
+
+.persona-card.selected {
+    background: rgba(59, 130, 246, 0.1);
+    border-color: #3b82f6;
+    color: #f1f5f9;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.persona-icon {
+    font-size: 2rem;
+}
+
+.persona-name {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.intro-instructions {
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(10px);
+    text-align: left;
+}
+
+.intro-instructions h2 {
+    font-size: 1.25rem;
+    color: #f1f5f9;
+    margin: 0 0 0.75rem;
+}
+
+.intro-instructions>p {
+    color: #94a3b8;
+    margin: 0 0 1rem;
+    line-height: 1.5;
+}
+
+.intro-pillars {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+}
+
+.intro-pillar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.75rem;
+    background: rgba(15, 23, 42, 0.5);
+    border-radius: 0.5rem;
+}
+
+.intro-pillar .pillar-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.intro-pillar .pillar-name {
+    font-weight: 600;
+    color: #f1f5f9;
+    font-size: 0.875rem;
+}
+
+.intro-pillar .pillar-desc {
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+.intro-conditions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.condition {
+    background: rgba(30, 41, 59, 0.6);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    text-align: left;
+    backdrop-filter: blur(10px);
+}
+
+.condition.win {
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.condition.lose {
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.condition h3 {
+    font-size: 0.875rem;
+    margin: 0 0 0.5rem;
+    color: #f1f5f9;
+}
+
+.condition p,
+.condition li {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.condition ul {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.condition li {
+    margin-bottom: 0.25rem;
+}
+
+.start-button {
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem 3rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+}
+
+.start-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 30px rgba(59, 130, 246, 0.4);
+}
+
+.start-button:active {
+    transform: translateY(0);
+}

@@ -1,0 +1,59 @@
+.pillar-bar {
+    margin-bottom: 1rem;
+}
+
+.pillar-bar__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.375rem;
+}
+
+.pillar-bar__label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #e2e8f0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.pillar-bar__status {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.pillar-bar__track {
+    position: relative;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.pillar-bar__fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 6px;
+    transition: width 0.5s ease-out, background-color 0.3s ease;
+    box-shadow: 0 0 8px currentColor;
+}
+
+.pillar-bar__markers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.pillar-bar__marker {
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+}

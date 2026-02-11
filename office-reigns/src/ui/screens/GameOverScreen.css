@@ -1,0 +1,136 @@
+.game-over-screen {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f172a 0%, #450a0a 50%, #0f172a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.game-over-card {
+    background: rgba(30, 41, 59, 0.9);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: 1.5rem;
+    padding: 3rem;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    box-shadow:
+        0 25px 50px -12px rgba(0, 0, 0, 0.5),
+        0 0 50px rgba(239, 68, 68, 0.1);
+}
+
+.game-over-card__icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.game-over-card__title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #fca5a5;
+    margin: 0 0 1.5rem;
+}
+
+.game-over-card__narrative {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.game-over-card__narrative p {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    color: #94a3b8;
+    margin: 0;
+}
+
+.game-over-card__stats {
+    margin-bottom: 2rem;
+}
+
+.game-over-card__stat {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+.game-over-card__stat-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.game-over-card__stat-value {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #f1f5f9;
+}
+
+.game-over-card__pillars {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.game-over-card__pillar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+}
+
+.game-over-card__pillar-emoji {
+    font-size: 1.5rem;
+}
+
+.game-over-card__pillar-status {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.game-over-card__pillar-status--critical {
+    color: #ef4444;
+}
+
+.game-over-card__pillar-status--low {
+    color: #f97316;
+}
+
+.game-over-card__pillar-status--ok {
+    color: #eab308;
+}
+
+.game-over-card__pillar-status--high {
+    color: #22c55e;
+}
+
+.game-over-card__pillar-status--dominant {
+    color: #3b82f6;
+}
+
+.game-over-card__button {
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    border: none;
+    border-radius: 1rem;
+    padding: 1.25rem 2.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.game-over-card__button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px -5px rgba(59, 130, 246, 0.5);
+}

@@ -1,0 +1,93 @@
+.decision-card {
+    background: linear-gradient(145deg,
+            rgba(30, 41, 59, 0.9) 0%,
+            rgba(15, 23, 42, 0.95) 100%);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow:
+        0 25px 50px -12px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+}
+
+.decision-card__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f1f5f9;
+    text-align: center;
+    margin: 0 0 1rem;
+    background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.decision-card__prompt {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    color: #cbd5e1;
+    text-align: center;
+    margin: 0 0 2rem;
+}
+
+.decision-card__choices {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.decision-card__choice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    border: 2px solid transparent;
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-height: 4rem;
+}
+
+.decision-card__choice--left {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(59, 130, 246, 0.05) 100%);
+    border-color: rgba(59, 130, 246, 0.3);
+    color: #93c5fd;
+}
+
+.decision-card__choice--left:hover:not(:disabled) {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0.15) 100%);
+    border-color: #3b82f6;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.3);
+}
+
+.decision-card__choice--right {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(139, 92, 246, 0.05) 100%);
+    border-color: rgba(139, 92, 246, 0.3);
+    color: #c4b5fd;
+}
+
+.decision-card__choice--right:hover:not(:disabled) {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.3) 0%, rgba(139, 92, 246, 0.15) 100%);
+    border-color: #8b5cf6;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(139, 92, 246, 0.3);
+}
+
+.decision-card__choice:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.decision-card__choice-icon {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.decision-card__choice-label {
+    text-align: center;
+}

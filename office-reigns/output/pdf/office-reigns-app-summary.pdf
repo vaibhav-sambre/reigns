@@ -1,0 +1,121 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+3 0 obj
+<< /Length 2728 >>
+stream
+BT
+/F2 18 Tf
+1 0 0 1 54 760 Tm
+(Office Reigns - App Summary) Tj
+/F2 12 Tf
+1 0 0 1 54 741 Tm
+(What It Is) Tj
+/F1 10 Tf
+1 0 0 1 54 728 Tm
+(Office Reigns is a local-first browser game inspired by Reigns where each week presents a workplace) Tj
+/F1 10 Tf
+1 0 0 1 54 715 Tm
+(decision. Player choices shift four career pillars and determine whether they earn promotion or burn out.) Tj
+/F2 12 Tf
+1 0 0 1 54 696 Tm
+(Who It's For) Tj
+/F1 10 Tf
+1 0 0 1 54 683 Tm
+(Primary persona: individual contributors in corporate roles. The app supports role selection for) Tj
+/F1 10 Tf
+1 0 0 1 54 670 Tm
+(Developer, Product Manager, Analyst, and Business Associate.) Tj
+/F2 12 Tf
+1 0 0 1 54 651 Tm
+(What It Does) Tj
+/F1 10 Tf
+1 0 0 1 58 638 Tm
+(- Runs week-by-week decision gameplay with two choices per card.) Tj
+/F1 10 Tf
+1 0 0 1 58 625 Tm
+(- Tracks four pillars \(bandwidth, salary, reputation, life\) with clamped values 0-100.) Tj
+/F1 10 Tf
+1 0 0 1 58 612 Tm
+(- Applies deterministic game rules for promotion and game-over outcomes.) Tj
+/F1 10 Tf
+1 0 0 1 58 599 Tm
+(- Seeds and stores card content locally in IndexedDB.) Tj
+/F1 10 Tf
+1 0 0 1 58 586 Tm
+(- Supports persona-aware and anti-repeat card selection with optional seeded RNG.) Tj
+/F1 10 Tf
+1 0 0 1 58 573 Tm
+(- Provides admin tools to list/edit/delete cards and configure promotion settings.) Tj
+/F1 10 Tf
+1 0 0 1 58 560 Tm
+(- Imports/exports cards as JSON for backup and bulk updates.) Tj
+/F2 12 Tf
+1 0 0 1 54 541 Tm
+(How It Works \(Repo Evidence\)) Tj
+/F1 10 Tf
+1 0 0 1 58 528 Tm
+(- UI layer: React + React Router routes '/' for gameplay and '/admin' for tooling.) Tj
+/F1 10 Tf
+1 0 0 1 58 515 Tm
+(- State layer: GameProvider \(useReducer + effects\) orchestrates init, decision, draw, and persistence.) Tj
+/F1 10 Tf
+1 0 0 1 58 502 Tm
+(- Engine layer: pure TypeScript modules \(effects, gameState, promotion, cardSelector\) compute outcomes.) Tj
+/F1 10 Tf
+1 0 0 1 58 489 Tm
+(- Persistence layer: idb-backed IndexedDB stores cards, current game state, and promotion settings.) Tj
+/F1 10 Tf
+1 0 0 1 58 476 Tm
+(- Data flow: Intro persona -> card drawn -> choice -> effects applied -> status checked -> state saved.) Tj
+/F1 10 Tf
+1 0 0 1 58 463 Tm
+(- External backend/API service: Not found in repo.) Tj
+/F2 12 Tf
+1 0 0 1 54 444 Tm
+(How To Run \(Minimal\)) Tj
+/F1 10 Tf
+1 0 0 1 54 431 Tm
+(1. Install dependencies: npm install) Tj
+/F1 10 Tf
+1 0 0 1 54 418 Tm
+(2. Start dev server: npm run dev) Tj
+/F1 10 Tf
+1 0 0 1 54 405 Tm
+(3. Open: http://localhost:5173 \(admin UI at /admin\)) Tj
+/F1 8 Tf
+1 0 0 1 54 386 Tm
+(Evidence files: README.md; src/App.tsx; src/ui/hooks/useGame.tsx; src/engine/*.ts;) Tj
+/F1 8 Tf
+1 0 0 1 54 373 Tm
+(src/persistence/db.ts; src/admin/*.tsx; package.json.) Tj
+ET
+endstream
+endobj
+4 0 obj
+<< /Type /Page /Parent 5 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 3 0 R >>
+endobj
+5 0 obj
+<< /Type /Pages /Count 1 /Kids [4 0 R] >>
+endobj
+6 0 obj
+<< /Type /Catalog /Pages 5 0 R >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000000154 00000 n 
+0000002933 00000 n 
+0000003069 00000 n 
+0000003126 00000 n 
+trailer
+<< /Size 7 /Root 6 0 R >>
+startxref
+3175
+%%EOF

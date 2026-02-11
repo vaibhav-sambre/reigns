@@ -1,0 +1,107 @@
+.name-input-screen {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.name-input-content {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2.5rem;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.name-input-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.name-input-header h2 {
+    font-size: 2rem;
+    margin: 0 0 0.5rem 0;
+    background: linear-gradient(90deg, #ffd700, #ffa500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.name-input-header p {
+    color: #a0a0a0;
+    margin: 0;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #e0e0e0;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #ffd700;
+    box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.2);
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.start-button,
+.skip-button {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s;
+    flex: 1;
+}
+
+.start-button {
+    background: linear-gradient(90deg, #ffd700, #ffa500);
+    border: none;
+    color: #000;
+}
+
+.start-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+}
+
+.skip-button {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #a0a0a0;
+}
+
+.skip-button:hover {
+    border-color: #fff;
+    color: #fff;
+}
