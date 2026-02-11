@@ -30,17 +30,6 @@ export function NameInputScreen({ persona, onComplete }: NameInputScreenProps) {
         onComplete(DEFAULT_CHARACTER_NAMES);
     };
 
-    const getRoleDescription = (role: keyof CharacterNames) => {
-        switch (role) {
-            case 'manager':
-                return "Your direct report manager who handles your performance reviews.";
-            case 'lead':
-                return "The technical lead or senior member who guides your daily work.";
-            case 'colleague':
-                return "A peer you work closely with on projects.";
-        }
-    };
-
     const getRoleLabel = (role: keyof CharacterNames): string => {
         switch (role) {
             case 'manager':

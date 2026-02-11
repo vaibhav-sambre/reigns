@@ -44,13 +44,13 @@ describe('createSeededRng', () => {
 
 describe('selectCard', () => {
     it('returns null for empty card array', () => {
-        const result = selectCard([], []);
+        const result = selectCard([], [], [], 1, 'developer');
         expect(result).toBeNull();
     });
 
     it('returns a card from the available cards', () => {
         const cards = createTestCards(5);
-        const result = selectCard(cards, []);
+        const result = selectCard(cards, [], [], 1, 'developer');
         expect(result).not.toBeNull();
         expect(cards.map((c) => c.id)).toContain(result?.id);
     });
@@ -61,7 +61,7 @@ describe('selectCard', () => {
 
         // Run multiple times to ensure recent cards are avoided
         for (let i = 0; i < 20; i++) {
-            const result = selectCard(cards, recentIds);
+            const result = selectCard(cards, recentIds, [], 1, 'developer');
             expect(result).not.toBeNull();
             expect(recentIds).not.toContain(result?.id);
         }
@@ -71,15 +71,15 @@ describe('selectCard', () => {
         const cards = createTestCards(3);
         const recentIds = ['card-1', 'card-2', 'card-3'];
 
-        const result = selectCard(cards, recentIds);
+        const result = selectCard(cards, recentIds, [], 1, 'developer');
         expect(result).not.toBeNull();
     });
 
     it('produces deterministic results with seed', () => {
         const cards = createTestCards(10);
 
-        const result1 = selectCard(cards, [], 12345, 0);
-        const result2 = selectCard(cards, [], 12345, 0);
+        const result1 = selectCard(cards, [], [], 1, 'developer', 12345, 0);
+        const result2 = selectCard(cards, [], [], 1, 'developer', 12345, 0);
 
         expect(result1?.id).toBe(result2?.id);
     });
@@ -87,8 +87,8 @@ describe('selectCard', () => {
     it('produces different results with different call counts', () => {
         const cards = createTestCards(10);
 
-        const result1 = selectCard(cards, [], 12345, 0);
-        const result2 = selectCard(cards, [], 12345, 5);
+        const result1 = selectCard(cards, [], [], 1, 'developer', 12345, 0);
+        const result2 = selectCard(cards, [], [], 1, 'developer', 12345, 5);
 
         // They might be the same by chance, but usually different
         // Just ensure they don't crash
