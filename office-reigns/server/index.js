@@ -39,6 +39,10 @@ const getAvailablePersonas = () => {
 
 // --- Routes ---
 
+app.get('/', (req, res) => {
+    res.send('Office Reigns Server is Running! Try /api/cards');
+});
+
 app.get('/api/cards', (req, res) => {
     res.json(cards);
 });
