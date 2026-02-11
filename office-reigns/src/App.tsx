@@ -1,7 +1,7 @@
 // Main Application with Routing
 
 import { useState } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { GameProvider, useGame } from './ui/hooks/useGame';
 import { GameScreen } from './ui/screens/GameScreen';
 import { GameOverScreen } from './ui/screens/GameOverScreen';
@@ -60,7 +60,7 @@ function GameWrapper() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         {/* Game Routes */}
         <Route
@@ -83,7 +83,7 @@ function App() {
         {/* Fallback */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

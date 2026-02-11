@@ -51,9 +51,10 @@ app.get('/api/config', (req, res) => {
     const config = {
         personas: getAvailablePersonas(),
         promotionSettings: {
-            requiredWeek: 40,
-            requiredPillarsCount: 2,
-            requiredPillarValue: 70
+            minWeek: 40,
+            minPillarsAbove60: 2,
+            maxPillarsBelow30: 0,
+            mode: 'immediate'
         }
     };
     res.json(config);
