@@ -26,6 +26,7 @@ import {
     seedCards,
 } from '../../persistence/db';
 import seedData from '../../../data/ic_cards.seed.json';
+import { playSound } from '../../engine/audio';
 
 // Game actions
 type GameAction =
@@ -193,7 +194,23 @@ export function GameProvider({ children }: { children: ReactNode }) {
         }
     }, [state.gameState, state.isLoading]);
 
+
+
+    // ...
+
     const makeDecision = (choice: 'left' | 'right') => {
+        // Play sound based on outcome
+        if (state.gameState && state.currentCard) {
+            const nextState = advanceWeek(state.gameState, state.currentCard, choice);
+            if (nextState.status === 'promoted') {
+                playSound('promote');
+            } else if (nextState.status === 'game-over') {
+                playSound('game-over');
+            } else {
+                playSound('select');
+            }
+        }
+
         dispatch({ type: 'MAKE_DECISION', payload: { choice } });
         setShowOutcome(true);
     };

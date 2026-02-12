@@ -1,6 +1,7 @@
 // Decision card component
 
 import type { Card } from '../../engine/types';
+import { playSound } from '../../engine/audio';
 import './DecisionCard.css';
 
 interface DecisionCardProps {
@@ -10,6 +11,13 @@ interface DecisionCardProps {
 }
 
 export function DecisionCard({ card, onChoose, disabled }: DecisionCardProps) {
+    const handleChoice = (choice: 'left' | 'right') => {
+        if (!disabled) {
+            playSound('swipe');
+            onChoose(choice);
+        }
+    };
+
     return (
         <div className="decision-card">
             {card.title && <h2 className="decision-card__title">{card.title}</h2>}
@@ -18,7 +26,7 @@ export function DecisionCard({ card, onChoose, disabled }: DecisionCardProps) {
             <div className="decision-card__choices">
                 <button
                     className="decision-card__choice decision-card__choice--left"
-                    onClick={() => onChoose('left')}
+                    onClick={() => handleChoice('left')}
                     disabled={disabled}
                 >
                     <span className="decision-card__choice-icon">←</span>
@@ -29,7 +37,7 @@ export function DecisionCard({ card, onChoose, disabled }: DecisionCardProps) {
 
                 <button
                     className="decision-card__choice decision-card__choice--right"
-                    onClick={() => onChoose('right')}
+                    onClick={() => handleChoice('right')}
                     disabled={disabled}
                 >
                     <span className="decision-card__choice-label">
