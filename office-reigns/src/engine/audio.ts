@@ -11,7 +11,7 @@ const initAudio = () => {
     if (!audioCtx) {
         audioCtx = new (window.AudioContext || (window as any).webkitAudioContext)();
         masterGain = audioCtx.createGain();
-        masterGain.gain.value = 0.3; // Master volume
+        masterGain.gain.value = 0.5; // Master volume increased
         masterGain.connect(audioCtx.destination);
     }
     if (audioCtx.state === 'suspended') {
@@ -142,21 +142,36 @@ const CHORDS = [
 ];
 
 export function startBackgroundMusic() {
-    if (isMusicPlaying) return;
+    if (isMusicPlaying) {
+        console.log("Music already playing");
+        return;
+    }
 
+    console.log("Starting background music...");
     try {
         const { ctx, master } = initAudio();
-        if (!ctx || !master) return;
+
+        // Ensure context is running (sometimes initAudio returns suspended state)
+        if (ctx && ctx.state === 'suspended') {
+            ctx.resume().then(() => console.log("AudioContext resumed"));
+        }
+
+        if (!ctx || !master) {
+            console.error("Audio context not initialized");
+            return;
+        }
 
         if (!musicGain) {
             musicGain = ctx.createGain();
-            musicGain.gain.value = 0.1; // Low volume for background
+            // Increased volume significantly
+            musicGain.gain.value = 0.6;
             musicGain.connect(master);
         }
 
         isMusicPlaying = true;
         currentNoteIndex = 0;
         scheduleNextMeasure();
+        console.log("Music scheduled");
 
     } catch (e) {
         console.warn("Background music failed", e);
