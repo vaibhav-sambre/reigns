@@ -58,6 +58,28 @@
     font-size: 1.5rem;
 }
 
+.music-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 50%;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.music-toggle:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.music-toggle:active {
+    transform: scale(0.95);
+}
+
 .game-header__week {
     display: flex;
     flex-direction: column;
