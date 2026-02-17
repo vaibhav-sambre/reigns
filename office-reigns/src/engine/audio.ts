@@ -113,3 +113,109 @@ function playNote(ctx: AudioContext, master: GainNode, freq: number, startTime: 
     osc.start(startTime);
     osc.stop(startTime + duration);
 }
+
+// Background Music
+let musicGain: GainNode | null = null;
+let musicInterval: number | null = null;
+let isMusicPlaying = false;
+let currentNoteIndex = 0;
+
+// Simple "Elevator Bossa Nova" progression
+// ii - V - I - VI
+// Dm7 - G7 - Cmaj7 - A7
+const BASS_LINE = [
+    { freq: 146.83, duration: 2 }, // D3
+    { freq: 98.00, duration: 2 },  // G2
+    { freq: 130.81, duration: 2 }, // C3
+    { freq: 110.00, duration: 2 }, // A2
+];
+
+const CHORDS = [
+    // Dm7 (D F A C)
+    [293.66, 349.23, 440.00, 523.25],
+    // G7 (G B D F)
+    [196.00, 246.94, 293.66, 349.23],
+    // Cmaj7 (C E G B)
+    [261.63, 329.63, 392.00, 493.88],
+    // A7 (A C# E G)
+    [220.00, 277.18, 329.63, 392.00]
+];
+
+export function startBackgroundMusic() {
+    if (isMusicPlaying) return;
+
+    try {
+        const { ctx, master } = initAudio();
+        if (!ctx || !master) return;
+
+        if (!musicGain) {
+            musicGain = ctx.createGain();
+            musicGain.gain.value = 0.1; // Low volume for background
+            musicGain.connect(master);
+        }
+
+        isMusicPlaying = true;
+        currentNoteIndex = 0;
+        scheduleNextMeasure();
+
+    } catch (e) {
+        console.warn("Background music failed", e);
+    }
+}
+
+export function stopBackgroundMusic() {
+    isMusicPlaying = false;
+    if (musicInterval) {
+        window.clearTimeout(musicInterval);
+        musicInterval = null;
+    }
+    // We don't disconnect the node to avoid clicking, just stop scheduling
+}
+
+function scheduleNextMeasure() {
+    if (!isMusicPlaying || !audioCtx || !musicGain) return;
+
+    const ctx = audioCtx;
+    const now = ctx.currentTime;
+    const tempo = 100; // BPM
+    const beatDuration = 60 / tempo;
+    const measureDuration = beatDuration * 4;
+
+    // Play Bass
+    playTone(ctx, musicGain, BASS_LINE[currentNoteIndex].freq, now, measureDuration, 'triangle', 0.3);
+
+    // Play Chord Stabs (on beat 2 and 4 - light bossa feel)
+    const chord = CHORDS[currentNoteIndex];
+    chord.forEach(freq => {
+        // Soft stabs
+        playTone(ctx, musicGain!, freq, now + beatDuration, 0.2, 'sine', 0.15);
+        playTone(ctx, musicGain!, freq, now + beatDuration * 2.5, 0.2, 'sine', 0.1);
+        playTone(ctx, musicGain!, freq, now + beatDuration * 3.5, 0.4, 'sine', 0.15);
+    });
+
+    // Schedule next measure
+    currentNoteIndex = (currentNoteIndex + 1) % BASS_LINE.length;
+
+    // Use setTimeout to schedule the next batch lookahead
+    // Schedule slightly before the current measure ends to ensure continuity
+    const lookahead = (measureDuration * 1000) - 100;
+    musicInterval = window.setTimeout(scheduleNextMeasure, lookahead);
+}
+
+function playTone(ctx: AudioContext, dest: GainNode, freq: number, startTime: number, duration: number, type: OscillatorType, maxVol: number) {
+    const osc = ctx.createOscillator();
+    const env = ctx.createGain();
+
+    osc.type = type;
+    osc.frequency.value = freq;
+
+    env.gain.setValueAtTime(0, startTime);
+    env.gain.linearRampToValueAtTime(maxVol, startTime + 0.05);
+    env.gain.exponentialRampToValueAtTime(0.001, startTime + duration);
+
+    osc.connect(env);
+    env.connect(dest);
+
+    osc.start(startTime);
+    osc.stop(startTime + duration);
+}

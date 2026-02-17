@@ -26,7 +26,7 @@ import {
     seedCards,
 } from '../../persistence/db';
 import seedData from '../../../data/ic_cards.seed.json';
-import { playSound } from '../../engine/audio';
+import { playSound, startBackgroundMusic } from '../../engine/audio';
 
 // Game actions
 type GameAction =
@@ -156,6 +156,10 @@ export function GameProvider({ children }: { children: ReactNode }) {
     const goToIntro = () => setShowIntro(true);
     const dismissIntro = () => setShowIntro(false);
 
+
+
+    // ... existing code
+
     // Initialize on mount
     useEffect(() => {
         async function init() {
@@ -180,12 +184,32 @@ export function GameProvider({ children }: { children: ReactNode }) {
         init();
     }, []);
 
+    // Start music on first interaction (handled by UI button usually, but here we try when game starts)
+    // AudioContext might be suspended until user gesture
+    useEffect(() => {
+        const handleInteraction = () => {
+            startBackgroundMusic();
+            window.removeEventListener('click', handleInteraction);
+            window.removeEventListener('keydown', handleInteraction);
+        };
+
+        window.addEventListener('click', handleInteraction);
+        window.addEventListener('keydown', handleInteraction);
+
+        return () => {
+            window.removeEventListener('click', handleInteraction);
+            window.removeEventListener('keydown', handleInteraction);
+        };
+    }, []);
+
     // Draw initial card when game state is ready
     useEffect(() => {
         if (state.gameState && !state.currentCard && state.gameState.status === 'playing') {
             dispatch({ type: 'DRAW_CARD' });
         }
     }, [state.gameState, state.currentCard]);
+
+
 
     // Persist game state changes
     useEffect(() => {
