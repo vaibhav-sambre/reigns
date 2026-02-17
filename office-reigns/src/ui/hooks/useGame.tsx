@@ -26,7 +26,7 @@ import {
     seedCards,
 } from '../../persistence/db';
 import seedData from '../../../data/ic_cards.seed.json';
-import { playSound, startBackgroundMusic } from '../../engine/audio';
+import { playSound, startBackgroundMusic, toggleBackgroundMusic } from '../../engine/audio';
 
 // Game actions
 type GameAction =
@@ -52,6 +52,8 @@ interface GameContextValue extends GameContextState {
     showIntro: boolean;
     goToIntro: () => void;
     dismissIntro: () => void;
+    isMusicPlaying: boolean;
+    toggleMusic: () => void;
 }
 
 const GameContext = createContext<GameContextValue | null>(null);
@@ -156,6 +158,13 @@ export function GameProvider({ children }: { children: ReactNode }) {
     const goToIntro = () => setShowIntro(true);
     const dismissIntro = () => setShowIntro(false);
 
+    const [isMusicPlaying, setIsMusicPlaying] = useState(false);
+
+    const toggleMusic = () => {
+        const playing = toggleBackgroundMusic();
+        setIsMusicPlaying(playing);
+    };
+
 
 
     // ... existing code
@@ -189,6 +198,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
     useEffect(() => {
         const handleInteraction = () => {
             startBackgroundMusic();
+            setIsMusicPlaying(true);
             window.removeEventListener('click', handleInteraction);
             window.removeEventListener('keydown', handleInteraction);
         };
@@ -268,6 +278,8 @@ export function GameProvider({ children }: { children: ReactNode }) {
                 showIntro,
                 goToIntro,
                 dismissIntro,
+                isMusicPlaying,
+                toggleMusic,
             }}
         >
             {children}

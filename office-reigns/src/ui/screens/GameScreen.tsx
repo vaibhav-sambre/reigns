@@ -8,7 +8,7 @@ import { formatCardText } from '../../engine/utils';
 import './GameScreen.css';
 
 export function GameScreen() {
-    const { gameState, currentCard, lastOutcome, lastEffects, makeDecision, acknowledgeOutcome, goToIntro, isLoading } =
+    const { gameState, currentCard, lastOutcome, lastEffects, makeDecision, acknowledgeOutcome, goToIntro, isLoading, isMusicPlaying, toggleMusic } =
         useGame();
 
     if (isLoading || !gameState) {
@@ -27,6 +27,13 @@ export function GameScreen() {
             {/* Header */}
             <header className="game-header">
                 <div className="game-header__stage">
+                    <button
+                        className="music-toggle"
+                        onClick={toggleMusic}
+                        title={isMusicPlaying ? "Mute Music" : "Play Music"}
+                    >
+                        {isMusicPlaying ? '🔊' : '🔇'}
+                    </button>
                     <span className="game-header__stage-icon">💼</span>
                     <span>IC Stage</span>
                 </div>

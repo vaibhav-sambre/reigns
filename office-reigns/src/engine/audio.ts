@@ -141,6 +141,16 @@ const CHORDS = [
     [220.00, 277.18, 329.63, 392.00]
 ];
 
+export function toggleBackgroundMusic() {
+    if (isMusicPlaying) {
+        stopBackgroundMusic();
+        return false;
+    } else {
+        startBackgroundMusic();
+        return true;
+    }
+}
+
 export function startBackgroundMusic() {
     if (isMusicPlaying) {
         console.log("Music already playing");
