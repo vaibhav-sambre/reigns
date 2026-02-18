@@ -15,8 +15,11 @@ export interface Choice {
 
 export type Persona = 'developer' | 'product-manager' | 'analyst' | 'business-associate' | 'consultant';
 
+export type CardType = 'standard' | 'doomsday' | 'angel';
+
 export interface Card {
   id: string;
+  type?: CardType; // defaults to 'standard' if absent
   track: 'IC' | 'Manager';
   tags: string[];
   personas?: string[]; // 'generic' or specific persona IDs

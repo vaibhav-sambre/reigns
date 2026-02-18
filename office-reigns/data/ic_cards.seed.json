@@ -43,7 +43,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-002",
@@ -81,7 +82,8 @@
         },
         "personas": [
             "product-manager"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-003",
@@ -124,7 +126,8 @@
         "personas": [
             "developer",
             "product-manager"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-004",
@@ -166,7 +169,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-005",
@@ -216,7 +220,8 @@
         },
         "personas": [
             "developer"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-006",
@@ -254,7 +259,8 @@
         },
         "personas": [
             "business-associate"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-007",
@@ -300,7 +306,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-008",
@@ -350,7 +357,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-009",
@@ -392,7 +400,8 @@
         },
         "personas": [
             "developer"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-010",
@@ -434,7 +443,8 @@
         },
         "personas": [
             "developer"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-011",
@@ -480,7 +490,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-012",
@@ -526,7 +537,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-013",
@@ -572,7 +584,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-014",
@@ -611,7 +624,8 @@
         "personas": [
             "developer",
             "product-manager"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-015",
@@ -653,7 +667,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-016",
@@ -695,7 +710,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-017",
@@ -737,7 +753,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-018",
@@ -779,7 +796,8 @@
         },
         "personas": [
             "product-manager"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-019",
@@ -817,7 +835,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-020",
@@ -855,7 +874,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-021",
@@ -897,7 +917,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-022",
@@ -943,7 +964,8 @@
         },
         "personas": [
             "developer"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-023",
@@ -981,7 +1003,8 @@
         },
         "personas": [
             "developer"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-024",
@@ -1023,7 +1046,8 @@
         },
         "personas": [
             "product-manager"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-025",
@@ -1065,7 +1089,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-026",
@@ -1107,7 +1132,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-027",
@@ -1153,7 +1179,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-028",
@@ -1191,7 +1218,8 @@
         },
         "personas": [
             "product-manager"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-029",
@@ -1237,7 +1265,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-030",
@@ -1276,7 +1305,8 @@
         "personas": [
             "product-manager",
             "business-associate"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-031",
@@ -1314,7 +1344,8 @@
         },
         "personas": [
             "developer"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-032",
@@ -1360,7 +1391,8 @@
         },
         "personas": [
             "business-associate"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-033",
@@ -1402,7 +1434,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-034",
@@ -1444,7 +1477,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-promo-001",
@@ -1488,7 +1522,8 @@
         },
         "personas": [
             "developer"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-promo-002",
@@ -1528,7 +1563,8 @@
         },
         "personas": [
             "business-associate"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-promo-003",
@@ -1576,7 +1612,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-promo-004",
@@ -1616,7 +1653,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-promo-005",
@@ -1656,7 +1694,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-promo-006",
@@ -1708,7 +1747,8 @@
         },
         "personas": [
             "developer"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-035",
@@ -1746,7 +1786,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-036",
@@ -1784,7 +1825,8 @@
         },
         "personas": [
             "product-manager"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-037",
@@ -1818,7 +1860,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-038",
@@ -1857,7 +1900,8 @@
         "personas": [
             "developer",
             "analyst"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-039",
@@ -1903,7 +1947,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-040",
@@ -1945,7 +1990,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-041",
@@ -1987,7 +2033,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-042",
@@ -2021,7 +2068,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-043",
@@ -2067,7 +2115,8 @@
         },
         "personas": [
             "business-associate"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-044",
@@ -2113,7 +2162,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-045",
@@ -2151,7 +2201,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-046",
@@ -2193,7 +2244,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-047",
@@ -2239,7 +2291,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-048",
@@ -2281,7 +2334,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-049",
@@ -2323,7 +2377,8 @@
         },
         "personas": [
             "developer"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-050",
@@ -2361,7 +2416,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-051",
@@ -2403,7 +2459,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-052",
@@ -2441,7 +2498,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-053",
@@ -2487,7 +2545,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-054",
@@ -2529,7 +2588,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-055",
@@ -2571,7 +2631,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-056",
@@ -2609,7 +2670,8 @@
         },
         "personas": [
             "analyst"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-057",
@@ -2647,7 +2709,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-058",
@@ -2690,7 +2753,8 @@
         "personas": [
             "product-manager",
             "business-associate"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-059",
@@ -2740,7 +2804,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-060",
@@ -2778,7 +2843,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-061",
@@ -2816,7 +2882,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-062",
@@ -2854,7 +2921,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-063",
@@ -2892,7 +2960,8 @@
         },
         "personas": [
             "business-associate"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-064",
@@ -2938,7 +3007,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-065",
@@ -2985,7 +3055,8 @@
         "personas": [
             "product-manager",
             "business-associate"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-066",
@@ -3023,7 +3094,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-067",
@@ -3065,7 +3137,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-068",
@@ -3109,7 +3182,8 @@
             "developer",
             "product-manager",
             "business-associate"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-069",
@@ -3151,7 +3225,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-070",
@@ -3189,7 +3264,8 @@
         },
         "personas": [
             "business-associate"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-071",
@@ -3235,7 +3311,8 @@
         },
         "personas": [
             "developer"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-072",
@@ -3278,7 +3355,8 @@
         "personas": [
             "developer",
             "product-manager"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-073",
@@ -3316,7 +3394,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-074",
@@ -3362,7 +3441,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-075",
@@ -3404,7 +3484,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-076",
@@ -3442,7 +3523,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-077",
@@ -3480,7 +3562,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-078",
@@ -3518,7 +3601,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-079",
@@ -3556,7 +3640,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-080",
@@ -3594,7 +3679,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-081",
@@ -3636,7 +3722,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-082",
@@ -3678,7 +3765,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-083",
@@ -3728,7 +3816,8 @@
         },
         "personas": [
             "developer"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-084",
@@ -3770,7 +3859,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-085",
@@ -3812,7 +3902,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-086",
@@ -3858,7 +3949,8 @@
         },
         "personas": [
             "business-associate"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-087",
@@ -3896,7 +3988,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-088",
@@ -3934,7 +4027,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-089",
@@ -3972,7 +4066,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-090",
@@ -4010,7 +4105,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-091",
@@ -4049,7 +4145,8 @@
         "personas": [
             "developer",
             "business-associate"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-092",
@@ -4091,7 +4188,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-093",
@@ -4133,7 +4231,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-094",
@@ -4176,7 +4275,8 @@
         "personas": [
             "developer",
             "product-manager"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-095",
@@ -4214,7 +4314,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-096",
@@ -4252,7 +4353,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-097",
@@ -4294,7 +4396,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-098",
@@ -4336,7 +4439,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-099",
@@ -4378,7 +4482,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-100",
@@ -4422,14 +4527,13 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "doom-001",
         "track": "IC",
-        "tags": [
-            "doomsday"
-        ],
+        "tags": [],
         "title": "The Company Layoffs",
         "prompt": "Major layoffs are announced. Your team is being 'restructured'. You'll either take on more work or lose respect.",
         "leftChoice": {
@@ -4462,14 +4566,13 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "doomsday"
     },
     {
         "id": "doom-002",
         "track": "IC",
-        "tags": [
-            "doomsday"
-        ],
+        "tags": [],
         "title": "The Failed Project",
         "prompt": "A project you worked on is publicly declared a failure. The blame has to land somewhere.",
         "leftChoice": {
@@ -4498,14 +4601,13 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "doomsday"
     },
     {
         "id": "doom-003",
         "track": "IC",
-        "tags": [
-            "doomsday"
-        ],
+        "tags": [],
         "title": "The Budget Cuts",
         "prompt": "Company announces across-the-board budget cuts. Benefits and resources are being slashed.",
         "leftChoice": {
@@ -4538,14 +4640,13 @@
         },
         "personas": [
             "business-associate"
-        ]
+        ],
+        "type": "doomsday"
     },
     {
         "id": "doom-004",
         "track": "IC",
-        "tags": [
-            "doomsday"
-        ],
+        "tags": [],
         "title": "The Toxic Client",
         "prompt": "You're assigned to a notoriously difficult client. No one else wants this account.",
         "leftChoice": {
@@ -4574,14 +4675,13 @@
         },
         "personas": [
             "business-associate"
-        ]
+        ],
+        "type": "doomsday"
     },
     {
         "id": "doom-005",
         "track": "IC",
-        "tags": [
-            "doomsday"
-        ],
+        "tags": [],
         "title": "The System Outage",
         "prompt": "A critical system you manage goes down during peak hours. All eyes are on you.",
         "leftChoice": {
@@ -4614,14 +4714,13 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "doomsday"
     },
     {
         "id": "doom-006",
         "track": "IC",
-        "tags": [
-            "doomsday"
-        ],
+        "tags": [],
         "title": "The Reorganization",
         "prompt": "Company is reorganizing. Your team is being dissolved and redistributed.",
         "leftChoice": {
@@ -4650,14 +4749,13 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "doomsday"
     },
     {
         "id": "doom-007",
         "track": "IC",
-        "tags": [
-            "doomsday"
-        ],
+        "tags": [],
         "title": "The Missed Deadline",
         "prompt": "A critical deadline is missed and it's partially your fault. Consequences are coming.",
         "leftChoice": {
@@ -4690,14 +4788,13 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "doomsday"
     },
     {
         "id": "doom-008",
         "track": "IC",
-        "tags": [
-            "doomsday"
-        ],
+        "tags": [],
         "title": "The Office Politics",
         "prompt": "You've been caught in the middle of a power struggle between two senior leaders.",
         "leftChoice": {
@@ -4730,14 +4827,13 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "doomsday"
     },
     {
         "id": "doom-009",
         "track": "IC",
-        "tags": [
-            "doomsday"
-        ],
+        "tags": [],
         "title": "The PIP",
         "prompt": "You've been put on a Performance Improvement Plan. It's serious.",
         "leftChoice": {
@@ -4770,14 +4866,13 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "doomsday"
     },
     {
         "id": "doom-010",
         "track": "IC",
-        "tags": [
-            "doomsday"
-        ],
+        "tags": [],
         "title": "The New Manager",
         "prompt": "Your supportive {{manager}} left. The new one has very different expectations.",
         "leftChoice": {
@@ -4806,14 +4901,13 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "doomsday"
     },
     {
         "id": "doom-011",
         "track": "IC",
-        "tags": [
-            "doomsday"
-        ],
+        "tags": [],
         "title": "The Acquisition",
         "prompt": "Rumors are confirmed: the company is being acquired by a larger competitor. Redundancies are expected, and the atmosphere is tense and uncertain.",
         "leftChoice": {
@@ -4846,14 +4940,13 @@
         },
         "personas": [
             "product-manager"
-        ]
+        ],
+        "type": "doomsday"
     },
     {
         "id": "doom-012",
         "track": "IC",
-        "tags": [
-            "doomsday"
-        ],
+        "tags": [],
         "title": "The Impossible Deadline",
         "prompt": "Leadership demands an impossible task done by end of day. It's 4 PM.",
         "leftChoice": {
@@ -4882,14 +4975,13 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "doomsday"
     },
     {
         "id": "doom-013",
         "track": "IC",
-        "tags": [
-            "doomsday"
-        ],
+        "tags": [],
         "title": "The Sick Week",
         "prompt": "You're genuinely ill but there's a critical project. No one can cover.",
         "leftChoice": {
@@ -4922,14 +5014,13 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "doomsday"
     },
     {
         "id": "doom-014",
         "track": "IC",
-        "tags": [
-            "doomsday"
-        ],
+        "tags": [],
         "title": "The Salary Freeze",
         "prompt": "Company announces a salary freeze. No raises this year, no exceptions.",
         "leftChoice": {
@@ -4962,14 +5053,13 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "doomsday"
     },
     {
         "id": "doom-015",
         "track": "IC",
-        "tags": [
-            "doomsday"
-        ],
+        "tags": [],
         "title": "The Data Breach",
         "prompt": "A security incident occurred in your area of responsibility. Investigation incoming.",
         "leftChoice": {
@@ -4999,14 +5089,13 @@
         "personas": [
             "developer",
             "analyst"
-        ]
+        ],
+        "type": "doomsday"
     },
     {
         "id": "doom-016",
         "track": "IC",
-        "tags": [
-            "doomsday"
-        ],
+        "tags": [],
         "title": "The HR Investigation",
         "prompt": "Two colleagues are in open conflict. You're being asked to mediate.",
         "leftChoice": {
@@ -5035,14 +5124,13 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "doomsday"
     },
     {
         "id": "doom-017",
         "track": "IC",
-        "tags": [
-            "doomsday"
-        ],
+        "tags": [],
         "title": "The RTO Mandate",
         "prompt": "Return-to-office is now mandatory. Your remote setup was working perfectly.",
         "leftChoice": {
@@ -5075,14 +5163,13 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "doomsday"
     },
     {
         "id": "doom-018",
         "track": "IC",
-        "tags": [
-            "doomsday"
-        ],
+        "tags": [],
         "title": "The Skill Gap",
         "prompt": "New technology is being adopted. You're behind on the learning curve.",
         "leftChoice": {
@@ -5115,14 +5202,13 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "doomsday"
     },
     {
         "id": "doom-019",
         "track": "IC",
-        "tags": [
-            "doomsday"
-        ],
+        "tags": [],
         "title": "The Impossible Stakeholder",
         "prompt": "A powerful stakeholder keeps changing requirements. Project is in chaos.",
         "leftChoice": {
@@ -5151,14 +5237,13 @@
         },
         "personas": [
             "product-manager"
-        ]
+        ],
+        "type": "doomsday"
     },
     {
         "id": "doom-020",
         "track": "IC",
-        "tags": [
-            "doomsday"
-        ],
+        "tags": [],
         "title": "The Burnout Wave",
         "prompt": "Half your team is burning out. Work keeps redistributing to remaining people.",
         "leftChoice": {
@@ -5191,7 +5276,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "doomsday"
     },
     {
         "id": "ic-101",
@@ -5229,7 +5315,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-102",
@@ -5267,7 +5354,8 @@
         },
         "personas": [
             "developer"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-103",
@@ -5305,7 +5393,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-104",
@@ -5343,7 +5432,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-105",
@@ -5381,7 +5471,8 @@
         },
         "personas": [
             "developer"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-106",
@@ -5419,7 +5510,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-107",
@@ -5459,7 +5551,8 @@
         },
         "personas": [
             "product-manager"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-108",
@@ -5498,7 +5591,8 @@
         "personas": [
             "developer",
             "analyst"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-109",
@@ -5538,7 +5632,8 @@
             "developer",
             "product-manager",
             "analyst"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-110",
@@ -5578,7 +5673,8 @@
             "product-manager",
             "analyst",
             "business-associate"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-111",
@@ -5616,7 +5712,8 @@
         },
         "personas": [
             "developer"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-112",
@@ -5654,7 +5751,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-113",
@@ -5692,7 +5790,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-114",
@@ -5731,7 +5830,8 @@
         "personas": [
             "developer",
             "product-manager"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-115",
@@ -5770,7 +5870,8 @@
         "personas": [
             "product-manager",
             "analyst"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-116",
@@ -5808,7 +5909,8 @@
         },
         "personas": [
             "developer"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-117",
@@ -5846,7 +5948,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-118",
@@ -5885,7 +5988,8 @@
         "personas": [
             "developer",
             "product-manager"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-119",
@@ -5923,7 +6027,8 @@
         },
         "personas": [
             "developer"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-120",
@@ -5961,7 +6066,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-121",
@@ -5999,7 +6105,8 @@
         },
         "personas": [
             "business-associate"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-122",
@@ -6037,7 +6144,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-123",
@@ -6075,7 +6183,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-124",
@@ -6116,7 +6225,8 @@
             "product-manager",
             "analyst",
             "business-associate"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-125",
@@ -6154,7 +6264,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-126",
@@ -6192,7 +6303,8 @@
         },
         "personas": [
             "developer"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-127",
@@ -6230,7 +6342,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-128",
@@ -6268,7 +6381,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-129",
@@ -6307,7 +6421,8 @@
         "personas": [
             "developer",
             "product-manager"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-130",
@@ -6345,7 +6460,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-131",
@@ -6383,7 +6499,8 @@
         },
         "personas": [
             "business-associate"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-132",
@@ -6422,7 +6539,8 @@
         },
         "personas": [
             "product-manager"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-133",
@@ -6460,7 +6578,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-134",
@@ -6498,7 +6617,8 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-135",
@@ -6536,7 +6656,8 @@
         },
         "personas": [
             "developer"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-136",
@@ -6576,7 +6697,8 @@
         },
         "personas": [
             "product-manager"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-137",
@@ -6615,7 +6737,8 @@
         "personas": [
             "developer",
             "business-associate"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-138",
@@ -6653,7 +6776,8 @@
         },
         "personas": [
             "developer"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-139",
@@ -6692,7 +6816,8 @@
         "personas": [
             "developer",
             "product-manager"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "ic-140",
@@ -6730,14 +6855,13 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "angel-001",
         "track": "IC",
-        "tags": [
-            "angel"
-        ],
+        "tags": [],
         "title": "The Spot Bonus",
         "prompt": "You received a spot bonus for your recent hard work!",
         "leftChoice": {
@@ -6770,14 +6894,13 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "angel"
     },
     {
         "id": "angel-002",
         "track": "IC",
-        "tags": [
-            "angel"
-        ],
+        "tags": [],
         "title": "The Project Success",
         "prompt": "Your project launched successfully with zero bugs. Everyone is impressed.",
         "leftChoice": {
@@ -6811,14 +6934,13 @@
         "personas": [
             "developer",
             "product-manager"
-        ]
+        ],
+        "type": "angel"
     },
     {
         "id": "angel-003",
         "track": "IC",
-        "tags": [
-            "angel"
-        ],
+        "tags": [],
         "title": "The Unexpected Holiday",
         "prompt": "The CEO just announced a surprise 'Mental Health Day' for this Friday, effectively giving everyone a 3-day weekend to disconnect and recharge.",
         "leftChoice": {
@@ -6851,14 +6973,13 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "angel"
     },
     {
         "id": "angel-004",
         "track": "IC",
-        "tags": [
-            "angel"
-        ],
+        "tags": [],
         "title": "The Viral Feature",
         "prompt": "A feature you built went viral on social media. Users love it.",
         "leftChoice": {
@@ -6891,14 +7012,13 @@
         },
         "personas": [
             "product-manager"
-        ]
+        ],
+        "type": "angel"
     },
     {
         "id": "angel-005",
         "track": "IC",
-        "tags": [
-            "angel"
-        ],
+        "tags": [],
         "title": "The Mentor",
         "prompt": "A senior leader takes an interest in your career growth.",
         "leftChoice": {
@@ -6931,14 +7051,13 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "angel"
     },
     {
         "id": "angel-006",
         "track": "IC",
-        "tags": [
-            "angel"
-        ],
+        "tags": [],
         "title": "The Automation Miracle",
         "prompt": "The team adopted a new tool that automates half your grunt work.",
         "leftChoice": {
@@ -6967,14 +7086,13 @@
         },
         "personas": [
             "developer"
-        ]
+        ],
+        "type": "angel"
     },
     {
         "id": "angel-007",
         "track": "IC",
-        "tags": [
-            "angel"
-        ],
+        "tags": [],
         "title": "The Client Praise",
         "prompt": "A major client specifically praised your work in a meeting.",
         "leftChoice": {
@@ -7007,14 +7125,13 @@
         },
         "personas": [
             "business-associate"
-        ]
+        ],
+        "type": "angel"
     },
     {
         "id": "angel-008",
         "track": "IC",
-        "tags": [
-            "angel"
-        ],
+        "tags": [],
         "title": "The Quiet Week",
         "prompt": "You check your calendar and realize a miracle has occurred: you have absolutely no meetings scheduled for this entire week. It's pure deep work time.",
         "leftChoice": {
@@ -7047,14 +7164,13 @@
         },
         "personas": [
             "business-associate"
-        ]
+        ],
+        "type": "angel"
     },
     {
         "id": "angel-009",
         "track": "IC",
-        "tags": [
-            "angel"
-        ],
+        "tags": [],
         "title": "The Stock Grant",
         "prompt": "Company stock went up, and you get a refresher grant.",
         "leftChoice": {
@@ -7090,14 +7206,13 @@
             "product-manager",
             "analyst",
             "business-associate"
-        ]
+        ],
+        "type": "angel"
     },
     {
         "id": "angel-010",
         "track": "IC",
-        "tags": [
-            "angel"
-        ],
+        "tags": [],
         "title": "The Healthy Snacks",
         "prompt": "Office kitchen is stocked with premium healthy snacks and fancy coffee.",
         "leftChoice": {
@@ -7130,14 +7245,13 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "angel"
     },
     {
         "id": "angel-011",
         "track": "IC",
-        "tags": [
-            "angel"
-        ],
+        "tags": [],
         "title": "The Cancelled Project",
         "prompt": "A stressful project you hated just got cancelled. You're free!",
         "leftChoice": {
@@ -7170,14 +7284,13 @@
         },
         "personas": [
             "generic"
-        ]
+        ],
+        "type": "angel"
     },
     {
         "id": "angel-012",
         "track": "IC",
-        "tags": [
-            "angel"
-        ],
+        "tags": [],
         "title": "The Conference Talk",
         "prompt": "Your proposal to speak at a big conference was accepted.",
         "leftChoice": {
@@ -7206,14 +7319,13 @@
         },
         "personas": [
             "business-associate"
-        ]
+        ],
+        "type": "angel"
     },
     {
         "id": "angel-013",
         "track": "IC",
-        "tags": [
-            "angel"
-        ],
+        "tags": [],
         "title": "The Team Victory",
         "prompt": "The team hit a major quarterly OKR three weeks early! Leadership is thrilled and has allocated budget for a celebration.",
         "leftChoice": {
@@ -7246,14 +7358,13 @@
         },
         "personas": [
             "business-associate"
-        ]
+        ],
+        "type": "angel"
     },
     {
         "id": "angel-014",
         "track": "IC",
-        "tags": [
-            "angel"
-        ],
+        "tags": [],
         "title": "The Referral Bonus",
         "prompt": "Great news! The candidate you referred last month passed all interviews and accepted the offer. The referral bonus will be in your next check.",
         "leftChoice": {
@@ -7289,14 +7400,13 @@
             "product-manager",
             "analyst",
             "business-associate"
-        ]
+        ],
+        "type": "angel"
     },
     {
         "id": "angel-015",
         "track": "IC",
-        "tags": [
-            "angel"
-        ],
+        "tags": [],
         "title": "The Commute Fix",
         "prompt": "The company has started a new luxury shuttle service that stops right in your neighborhood, promising a comfortable commute with Wi-Fi.",
         "leftChoice": {
@@ -7332,14 +7442,13 @@
             "product-manager",
             "analyst",
             "business-associate"
-        ]
+        ],
+        "type": "angel"
     },
     {
         "id": "angel-016",
         "track": "IC",
-        "tags": [
-            "angel"
-        ],
+        "tags": [],
         "title": "The Open Source Fix",
         "prompt": "Your Pull Request to a major open-source library was just merged and publicly acknowledged by the maintainers. It's a nice feather in your cap.",
         "leftChoice": {
@@ -7368,14 +7477,13 @@
         },
         "personas": [
             "developer"
-        ]
+        ],
+        "type": "angel"
     },
     {
         "id": "angel-017",
         "track": "IC",
-        "tags": [
-            "angel"
-        ],
+        "tags": [],
         "title": "The Wellness Stipend",
         "prompt": "HR has announced a 'use it or lose it' wellness budget of $500 that needs to be spent by the end of the month on health-related items.",
         "leftChoice": {
@@ -7408,14 +7516,13 @@
         },
         "personas": [
             "business-associate"
-        ]
+        ],
+        "type": "angel"
     },
     {
         "id": "angel-018",
         "track": "IC",
-        "tags": [
-            "angel"
-        ],
+        "tags": [],
         "title": "The Helper",
         "prompt": "The new summer intern has taken initiative and updated all your project documentation perfectly, saving you days of tedious work.",
         "leftChoice": {
@@ -7448,14 +7555,13 @@
         },
         "personas": [
             "developer"
-        ]
+        ],
+        "type": "angel"
     },
     {
         "id": "angel-019",
         "track": "IC",
-        "tags": [
-            "angel"
-        ],
+        "tags": [],
         "title": "The Perfect Flow",
         "prompt": "You entered a flow state and finished a week's work in one day.",
         "leftChoice": {
@@ -7488,14 +7594,13 @@
         },
         "personas": [
             "developer"
-        ]
+        ],
+        "type": "angel"
     },
     {
         "id": "angel-020",
         "track": "IC",
-        "tags": [
-            "angel"
-        ],
+        "tags": [],
         "title": "The Inflation Adjustment",
         "prompt": "A surprise 'Cost of Living Adjustment' has been processed for all employees. You'll see a nice bump in your base salary starting this cycle.",
         "leftChoice": {
@@ -7531,7 +7636,8 @@
             "product-manager",
             "analyst",
             "business-associate"
-        ]
+        ],
+        "type": "angel"
     },
     {
         "id": "an-001",
@@ -7569,7 +7675,8 @@
                 }
             ],
             "outcomeText": "The board noticed the error immediately. You claimed it was a 'projection variance.' Nobody bought it."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "an-002",
@@ -7607,7 +7714,8 @@
                 }
             ],
             "outcomeText": "You built a functional tool. They complained it lacks 'jazz.' You assume 'jazz' refers to useless pie charts."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "an-003",
@@ -7645,7 +7753,8 @@
                 }
             ],
             "outcomeText": "The query finished. So did the customers' patience. The site went down for 20 minutes. Whoops."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "an-004",
@@ -7683,7 +7792,8 @@
                 }
             ],
             "outcomeText": "You automated their entire job. They are simultaneously grateful and terrified of you."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "an-005",
@@ -7721,7 +7831,8 @@
                 }
             ],
             "outcomeText": "You cooked the books. The numbers look great, provided reality doesn't intervene."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "an-006",
@@ -7759,7 +7870,8 @@
                 }
             ],
             "outcomeText": "You asked for more time. They asked for a new analyst. Just kidding... mostly."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "an-007",
@@ -7797,7 +7909,8 @@
                 }
             ],
             "outcomeText": "You explained data tracking limitations to a Boomer. It took 3 hours, but he understood."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "an-008",
@@ -7835,7 +7948,8 @@
                 }
             ],
             "outcomeText": "You emphasized 'potential growth'. They live in denial, but they like you."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "an-009",
@@ -7873,7 +7987,8 @@
                 }
             ],
             "outcomeText": "You taught a man to fish. He still complains about the fishing rod, but he's fishing."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "an-010",
@@ -7911,7 +8026,8 @@
                 }
             ],
             "outcomeText": "You let them take credit for a coincidence. They owe you a beer. Or a promotion."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "an-011",
@@ -7949,7 +8065,8 @@
                 }
             ],
             "outcomeText": "You declared a winner based on vibes. Science wept, but the roadmap moved forward."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "an-012",
@@ -7987,7 +8104,8 @@
                 }
             ],
             "outcomeText": "You have a two-week hole in your data. You'll label it 'The Dark Ages' in future charts."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "an-013",
@@ -8025,7 +8143,8 @@
                 }
             ],
             "outcomeText": "You blocked 'innovation' (aka change for the sake of change). You are now 'resistant to change'."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "an-014",
@@ -8063,7 +8182,8 @@
                 }
             ],
             "outcomeText": "You directed a VP to Jira. A bold move. He likely forgot the request 5 minutes later."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "an-015",
@@ -8101,7 +8221,8 @@
                 }
             ],
             "outcomeText": "You skipped the philosophical debate. You are officially 'not a team player' but you got work done."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "an-016",
@@ -8139,7 +8260,8 @@
                 }
             ],
             "outcomeText": "You presented the median. It's accurate, but boring. Nobody toasted your integrity."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "an-017",
@@ -8177,7 +8299,8 @@
                 }
             ],
             "outcomeText": "Chaos reigns. You answer the same question 5 times a day. Job security?"
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "an-018",
@@ -8215,7 +8338,8 @@
                 }
             ],
             "outcomeText": "You used math from the 19th century. It works perfectly. The CTO is bored."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "an-019",
@@ -8253,7 +8377,8 @@
                 }
             ],
             "outcomeText": "You ignored the shadow IT. If the EU auditors come, you'll be on vacation."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "an-020",
@@ -8291,7 +8416,8 @@
                 }
             ],
             "outcomeText": "You let the chaos act as the ledger. Revenue is whatever Sales says it is."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "an-021",
@@ -8329,7 +8455,8 @@
                 }
             ],
             "outcomeText": "You pointed out the lack of population. They called you 'lacking vision'."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "an-022",
@@ -8367,7 +8494,8 @@
                 }
             ],
             "outcomeText": "You slept. The morning standup was awkward, but you are well-rested."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "an-023",
@@ -8405,7 +8533,8 @@
                 }
             ],
             "outcomeText": "You mumbled through the slides. People applauded out of pity."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "an-024",
@@ -8443,7 +8572,8 @@
                 }
             ],
             "outcomeText": "You cited the TOS. You are technically correct, the best kind of correct. And boring."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "an-025",
@@ -8481,7 +8611,8 @@
                 }
             ],
             "outcomeText": "You maintain two sets of books. One for the board, one for reality. You are the keeper of truth."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "an-026",
@@ -8519,7 +8650,8 @@
                 }
             ],
             "outcomeText": "You let them use R. When they need to deploy to production, they'll come crawling back."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "an-027",
@@ -8557,7 +8689,8 @@
                 }
             ],
             "outcomeText": "You sent a user count by country. They responded 'Very insightful!'"
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "an-028",
@@ -8595,7 +8728,8 @@
                 }
             ],
             "outcomeText": "You explained 'big data'. They heard 'I am bad at my job'."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "an-029",
@@ -8633,7 +8767,8 @@
                 }
             ],
             "outcomeText": "You got 6 hours of work done. You are a pariah, but a productive one."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "an-030",
@@ -8671,7 +8806,8 @@
                 }
             ],
             "outcomeText": "The intern got a stern talking to. You are known as 'The Snitch'."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "pm-001",
@@ -8709,7 +8845,8 @@
                 }
             ],
             "outcomeText": "You showed him the metrics. He called you 'risk-averse' and 'lacking strategic foresight'."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "pm-002",
@@ -8747,7 +8884,8 @@
                 }
             ],
             "outcomeText": "Sales is furious. Engineering considers you a hero. You have integrity, but fewer commission checks."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "pm-035",
@@ -8785,7 +8923,8 @@
                 }
             ],
             "outcomeText": "Management is happy. Users are still blinded by your white background at 2 AM."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "pm-004",
@@ -8823,7 +8962,8 @@
                 }
             ],
             "outcomeText": "The release was delayed by a month. Nobody remembers why, they just blame you."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "pm-005",
@@ -8861,7 +9001,8 @@
                 }
             ],
             "outcomeText": "The brand integrity is preserved. The metrics are flat. Design now owes you a favor."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "pm-006",
@@ -8899,7 +9040,8 @@
                 }
             ],
             "outcomeText": "You prioritized UX over revenue. The users love you. The CFO is asking who you really work for."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "pm-007",
@@ -8937,7 +9079,8 @@
                 }
             ],
             "outcomeText": "The launch was cancelled. Marketing blames 'technical incompetence'. You slept soundly."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "pm-008",
@@ -8975,7 +9118,8 @@
                 }
             ],
             "outcomeText": "You ignored the rot. Development velocity has slowed to a crawl. But hey, you shipped *something*."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "pm-009",
@@ -9013,7 +9157,8 @@
                 }
             ],
             "outcomeText": "You took it on the chin. 'Feedback is a gift,' you muttered through gritted teeth."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "pm-010",
@@ -9051,7 +9196,8 @@
                 }
             ],
             "outcomeText": "You ignored the noise. Strategy means saying no, even when FOMO strikes."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "pm-011",
@@ -9089,7 +9235,8 @@
                 }
             ],
             "outcomeText": "You saved the user base. Finance calls you 'commercially naive'. You are poor but popular."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "pm-012",
@@ -9127,7 +9274,8 @@
                 }
             ],
             "outcomeText": "You were honest. Leadership panicked. Transparency is overrated."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "pm-013",
@@ -9165,7 +9313,8 @@
                 }
             ],
             "outcomeText": "You fixed a bug from 2019. The two users who encountered it are thrilled."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "pm-014",
@@ -9203,7 +9352,8 @@
                 }
             ],
             "outcomeText": "You argued semantics with lawyers. You won, but your soul is tired."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "pm-015",
@@ -9241,7 +9391,8 @@
                 }
             ],
             "outcomeText": "You threw good money after bad. It's the Sunk Cost Fallacy in action."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "pm-016",
@@ -9279,7 +9430,8 @@
                 }
             ],
             "outcomeText": "You slept. The team feels disconnected, but at least you're lucid."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "pm-017",
@@ -9317,7 +9469,8 @@
                 }
             ],
             "outcomeText": "You waited for perfection. Users didn't notice the 2px, but the vibes are immaculate."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "pm-018",
@@ -9355,7 +9508,8 @@
                 }
             ],
             "outcomeText": "You protected the users. Revenue missed the target. You are the moral victor of a failing quarter."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "pm-019",
@@ -9393,7 +9547,8 @@
                 }
             ],
             "outcomeText": "You banned the meetings. The Scrum Master is crying in a retrospective."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "pm-020",
@@ -9431,7 +9586,8 @@
                 }
             ],
             "outcomeText": "You asked 'Why?'. You were labeled 'legacy mindset'. It's lonely in the real world."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "pm-021",
@@ -9469,7 +9625,8 @@
                 }
             ],
             "outcomeText": "You made a Loom video. It has 0 views. At least you tried."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "pm-022",
@@ -9507,7 +9664,8 @@
                 }
             ],
             "outcomeText": "You stayed silent. The internet forgot about you in 4 hours. Silence is golden."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "pm-023",
@@ -9545,7 +9703,8 @@
                 }
             ],
             "outcomeText": "You did real work. Marketing thinks you hate fun. You just hate wasted time."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "pm-024",
@@ -9583,7 +9742,8 @@
                 }
             ],
             "outcomeText": "You punted the complexity. Future You will hate Current You."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "pm-025",
@@ -9621,7 +9781,8 @@
                 }
             ],
             "outcomeText": "You can't fix AWS. You went for a walk. Support will never forgive you."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "pm-026",
@@ -9659,7 +9820,8 @@
                 }
             ],
             "outcomeText": "You prioritized speed over access. Shame on you. (But the stakeholders are happy)."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "pm-027",
@@ -9697,7 +9859,8 @@
                 }
             ],
             "outcomeText": "You ignored internal needs. Support churn is up to 40%. Not your KPI, not your problem?"
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "pm-028",
@@ -9735,7 +9898,8 @@
                 }
             ],
             "outcomeText": "You published the fake numbers. The analyst is silently judging you from the corner."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "pm-029",
@@ -9773,7 +9937,8 @@
                 }
             ],
             "outcomeText": "'Bug fixes and improvements.' The classic lie. Nobody noticed."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "pm-030",
@@ -9811,7 +9976,8 @@
                 }
             ],
             "outcomeText": "You analyzed the system failure. High maturity score. Jerry is relieved."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "dev-001",
@@ -9849,7 +10015,8 @@
                 }
             ],
             "outcomeText": "You saved your weekend. Sales called you 'uncooperative'. You drank a beer in peace."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "dev-002",
@@ -9887,7 +10054,8 @@
                 }
             ],
             "outcomeText": "You slowly backed away. Let sleeping dragons lie. Dave knew what he was doing."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "dev-003",
@@ -9925,7 +10093,8 @@
                 }
             ],
             "outcomeText": "You cowboy-coded a fix in 3 minutes. Adrenaline spike: High. Code quality: Low."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "dev-004",
@@ -9963,7 +10132,8 @@
                 }
             ],
             "outcomeText": "Git blame is now useless. The history is ruined. Anarchy reigns."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "dev-005",
@@ -10001,7 +10171,8 @@
                 }
             ],
             "outcomeText": "You took a nap. The site came back up. Productivity resumed."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "dev-006",
@@ -10039,7 +10210,8 @@
                 }
             ],
             "outcomeText": "You spent the week migrating tables. No features shipped. You feel clean."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "dev-007",
@@ -10077,7 +10249,8 @@
                 }
             ],
             "outcomeText": "You moved it 1px. Now it's wrong, but QA passed it. Life is absurd."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "dev-008",
@@ -10115,7 +10288,8 @@
                 }
             ],
             "outcomeText": "You added console logs to production. A chaotic evil move, but you found the bug."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "dev-009",
@@ -10153,7 +10327,8 @@
                 }
             ],
             "outcomeText": "You built the napkin. It works, barely. The code is held together by hope."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "dev-010",
@@ -10191,7 +10366,8 @@
                 }
             ],
             "outcomeText": "You used a CSS hack. Images look like X-rays. It's 'Avant-Garde'."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "dev-011",
@@ -10229,7 +10405,8 @@
                 }
             ],
             "outcomeText": "You chose peace over money. Your bank account weeps, but your soul sighs."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "dev-012",
@@ -10267,7 +10444,8 @@
                 }
             ],
             "outcomeText": "You hid your coding window. You shipped a feature. The wiki remains a wasteland."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "dev-013",
@@ -10305,7 +10483,8 @@
                 }
             ],
             "outcomeText": "You rewrote the web in Rust. It's blazing fast. Nobody else can maintain it."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "dev-014",
@@ -10343,7 +10522,8 @@
                 }
             ],
             "outcomeText": "You survived. You remember nothing. You moved sticky notes on a screen."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "dev-015",
@@ -10381,7 +10561,8 @@
                 }
             ],
             "outcomeText": "You reached 100% coverage. It took twice as long. You sleep the sleep of the just."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "dev-016",
@@ -10419,7 +10600,8 @@
                 }
             ],
             "outcomeText": "It's just a warning. What's the worst that could happen? (Famous last words)."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "dev-017",
@@ -10457,7 +10639,8 @@
                 }
             ],
             "outcomeText": "You left the building. The fresh air was nice. The $7 latte hurt."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "dev-018",
@@ -10495,7 +10678,8 @@
                 }
             ],
             "outcomeText": "You approved it with kind notes. You are the bigger person. It's annoying."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "dev-019",
@@ -10533,7 +10717,8 @@
                 }
             ],
             "outcomeText": "You buried the cost in 'R&D expenses'. You live in fear of the audit."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "dev-020",
@@ -10571,7 +10756,8 @@
                 }
             ],
             "outcomeText": "You sent a link to a wiki page from 2018. 'Good luck,' you said."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "dev-021",
@@ -10609,7 +10795,8 @@
                 }
             ],
             "outcomeText": "You posted the rage-face emoji. It felt good. The site is still down."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "dev-022",
@@ -10647,7 +10834,8 @@
                 }
             ],
             "outcomeText": "The mushy feeling is awful. But your coworkers stopped buying earplugs."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "dev-023",
@@ -10685,7 +10873,8 @@
                 }
             ],
             "outcomeText": "It pained you physically to leave it. But you shipped on time."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "dev-024",
@@ -10723,7 +10912,8 @@
                 }
             ],
             "outcomeText": "You overwrote everyone else's work. 'My version is correct,' you lied."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "dev-025",
@@ -10761,7 +10951,8 @@
                 }
             ],
             "outcomeText": "You agreed to '3'. You worked weekends to finish it. Peer pressure wins."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "dev-026",
@@ -10799,7 +10990,8 @@
                 }
             ],
             "outcomeText": "You edited the file live on the server. You felt alive. The audit logs saw everything."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "dev-027",
@@ -10837,7 +11029,8 @@
                 }
             ],
             "outcomeText": "You listened. It was a question that could have been an email."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "dev-028",
@@ -10875,7 +11068,8 @@
                 }
             ],
             "outcomeText": "It was a race condition in the router. You fixed it properly. You are exhausted."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "dev-029",
@@ -10913,7 +11107,8 @@
                 }
             ],
             "outcomeText": "You prefer solitude. He thinks you're antisocial. Correct."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "dev-030",
@@ -10951,7 +11146,8 @@
                 }
             ],
             "outcomeText": "You dumbed it down for mortals. It's readable, but less 'clever'."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "ba-001",
@@ -10989,7 +11185,8 @@
                 }
             ],
             "outcomeText": "You used the default corporate theme. 'It lacks soul,' the partner said. But you slept."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "ba-002",
@@ -11031,7 +11228,8 @@
                 }
             ],
             "outcomeText": "You stayed home. The client asked where the 'fun one' was. Your boss is annoyed."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "ba-003",
@@ -11069,7 +11267,8 @@
                 }
             ],
             "outcomeText": "You sent last week's data. 'Growth is flat,' you lied. Nobody checked."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "ba-004",
@@ -11107,7 +11306,8 @@
                 }
             ],
             "outcomeText": "You said 'that's not my job'. It is now technically your job, but you delayed it."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "ba-005",
@@ -11145,7 +11345,8 @@
                 }
             ],
             "outcomeText": "Action items: 'Do better'. Strategy: 'Win'. Good enough."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "ba-006",
@@ -11183,7 +11384,8 @@
                 }
             ],
             "outcomeText": "You used UberEats and expensed it. The coffee was cold. No one cared."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "ba-007",
@@ -11221,7 +11423,8 @@
                 }
             ],
             "outcomeText": "You paid the invoice. It was easier than arguing. Finance is glaring at you."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "ba-008",
@@ -11259,7 +11462,8 @@
                 }
             ],
             "outcomeText": "Scope: 'Make dogs connect'. The project is doomed, but the document is done."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "ba-009",
@@ -11297,7 +11501,8 @@
                 }
             ],
             "outcomeText": "Middle seat. Crying baby. You arrived with a stiff neck and a hatred for humanity."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "ba-010",
@@ -11335,7 +11540,8 @@
                 }
             ],
             "outcomeText": "You guessed based on the smudges. 'Trends look positive,' you concluded."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "ba-011",
@@ -11373,7 +11579,8 @@
                 }
             ],
             "outcomeText": "You admitted ignorance. The client lost confidence. Integrity doesn't pay bills."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "ba-012",
@@ -11411,7 +11618,8 @@
                 }
             ],
             "outcomeText": "You left him on read. He fixed it himself. He will remember this."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "ba-013",
@@ -11449,7 +11657,8 @@
                 }
             ],
             "outcomeText": "Everyone is a 'Key Champion'. The map is useless, but safe."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "ba-014",
@@ -11487,7 +11696,8 @@
                 }
             ],
             "outcomeText": "You paid for their steaks. A $400 lesson in paper management."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "ba-015",
@@ -11525,7 +11735,8 @@
                 }
             ],
             "outcomeText": "You created a fake email. You got 7 days of access. Hackerman."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "ba-016",
@@ -11567,7 +11778,8 @@
                 }
             ],
             "outcomeText": "You kept pasting rows. It's meditative. Why rock the boat?"
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "ba-017",
@@ -11605,7 +11817,8 @@
                 }
             ],
             "outcomeText": "You spent $100 of your own cash on organic cotton. They loved it."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "ba-018",
@@ -11643,7 +11856,8 @@
                 }
             ],
             "outcomeText": "You marked 'In Roadmap' for 80% of items. We won the bid. The engineers are crying."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "ba-019",
@@ -11681,7 +11895,8 @@
                 }
             ],
             "outcomeText": "You talked about your handicap. Networking +1. Productivity -100."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "ba-020",
@@ -11719,7 +11934,8 @@
                 }
             ],
             "outcomeText": "The APAC team hates you. But the meeting is booked."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "ba-021",
@@ -11757,7 +11973,8 @@
                 }
             ],
             "outcomeText": "He waited on hold for 20 minutes. He asked 'what do you even do here?'."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "ba-022",
@@ -11795,7 +12012,8 @@
                 }
             ],
             "outcomeText": "You have dignity. He wrote it himself. It had typos."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "ba-023",
@@ -11833,7 +12051,8 @@
                 }
             ],
             "outcomeText": "You made employees bring their own food. Someone brought cheap chips. Morale plummeted."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "ba-024",
@@ -11871,7 +12090,8 @@
                 }
             ],
             "outcomeText": "You wrote 'work together well'. They asked for it to be 'more punchy'."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "ba-025",
@@ -11909,7 +12129,8 @@
                 }
             ],
             "outcomeText": "Big words: 'Slow', 'Expensive', 'Bad'. Analysis complete."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "ba-026",
@@ -11947,7 +12168,8 @@
                 }
             ],
             "outcomeText": "You snuck in behind an intern. Security saw you. A stern email followed."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "ba-027",
@@ -11985,7 +12207,8 @@
                 }
             ],
             "outcomeText": "You emailed the PDF. The Boomers on the board struggled to open it."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "ba-028",
@@ -12023,7 +12246,8 @@
                 }
             ],
             "outcomeText": "You claimed a migraine. You watched Netflix. Everyone thinks you're fragile."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "ba-029",
@@ -12061,7 +12285,8 @@
                 }
             ],
             "outcomeText": "It's the 'Crop Top' collection. The engineers are confused."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "ba-030",
@@ -12099,7 +12324,8 @@
                 }
             ],
             "outcomeText": "Everything is green. We are losing millions, but the dashboard looks great."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-001",
@@ -12137,7 +12363,8 @@
                 }
             ],
             "outcomeText": "You disconnected. Everyone thinks you have connection issues. Or feline issues."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-002",
@@ -12175,7 +12402,8 @@
                 }
             ],
             "outcomeText": "You added to the chaos. It felt cathartic. IT is investigating you."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-003",
@@ -12213,7 +12441,8 @@
                 }
             ],
             "outcomeText": "You sat on a uncomfortable couch. Security stared at you for 8 hours."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-004",
@@ -12251,7 +12480,8 @@
                 }
             ],
             "outcomeText": "You wrote 'Thieves will be prosecuted'. Someone drew a smiley face on it."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-005",
@@ -12289,7 +12519,8 @@
                 }
             ],
             "outcomeText": "You left early. HR marked you as 'not a team player'. You caught the train."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-006",
@@ -12327,7 +12558,8 @@
                 }
             ],
             "outcomeText": "You tripped the circuit breaker. Darkness fell. But you were cozy."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-007",
@@ -12365,7 +12597,8 @@
                 }
             ],
             "outcomeText": "You were locked out. IT made you beg. Productivity zero."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-008",
@@ -12403,7 +12636,8 @@
                 }
             ],
             "outcomeText": "You kept working. If it was real fire, you'd be dead. But you finished the report."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-009",
@@ -12441,7 +12675,8 @@
                 }
             ],
             "outcomeText": "If you can't send GIFs, are you even working? You enjoyed the afternoon."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-010",
@@ -12479,7 +12714,8 @@
                 }
             ],
             "outcomeText": "You hid a succulent behind your monitor. The resistance lives."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-011",
@@ -12517,7 +12753,8 @@
                 }
             ],
             "outcomeText": "They asked you about it in person. 'Must have missed it,' you lied."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-012",
@@ -12555,7 +12792,8 @@
                 }
             ],
             "outcomeText": "You respected your body. You watched others feast like vultures."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-013",
@@ -12594,7 +12832,8 @@
                 }
             ],
             "outcomeText": "You clicked 'Tomorrow' for the 40th day in a row. IT is monitoring you."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-014",
@@ -12632,7 +12871,8 @@
                 }
             ],
             "outcomeText": "You returned to your shrimp posture immediately."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-015",
@@ -12670,7 +12910,8 @@
                 }
             ],
             "outcomeText": "You hogged the booth for 3 hours. People tapped on the glass. You ignored them."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-016",
@@ -12708,7 +12949,8 @@
                 }
             ],
             "outcomeText": "You lied. Management celebrated the 'positive culture'. Nothing changed."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-017",
@@ -12746,7 +12988,8 @@
                 }
             ],
             "outcomeText": "Awkward silence. You respected the code. He respects you less."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-018",
@@ -12784,7 +13027,8 @@
                 }
             ],
             "outcomeText": "You browsed Reddit for 2 hours. 'Visibility' is key."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-019",
@@ -12822,7 +13066,8 @@
                 }
             ],
             "outcomeText": "Maybe they won't notice? (They noticed. They screenshotted it)."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-020",
@@ -12860,7 +13105,8 @@
                 }
             ],
             "outcomeText": "You stayed seated. You imagined the donut. Sadness ensued."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-021",
@@ -12899,7 +13145,8 @@
                 }
             ],
             "outcomeText": "You spent 3 days learning to do what used to take 3 minutes."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-022",
@@ -12937,7 +13184,8 @@
                 }
             ],
             "outcomeText": "You audited your own calendar. You billed 40 hours. You worked 50."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-023",
@@ -12975,7 +13223,8 @@
                 }
             ],
             "outcomeText": "You froze your face. A tactical disconnection. Genius."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-024",
@@ -13015,7 +13264,8 @@
                 }
             ],
             "outcomeText": "Let the dead rest in peace."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-025",
@@ -13053,7 +13303,8 @@
                 }
             ],
             "outcomeText": "A power move. Or just forgetfulness. Same effect."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-026",
@@ -13091,7 +13342,8 @@
                 }
             ],
             "outcomeText": "You avoided the ritual. You are a social pariah."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-027",
@@ -13129,7 +13381,8 @@
                 }
             ],
             "outcomeText": "You work with your chin on the desk. This is your life now."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-028",
@@ -13167,7 +13420,8 @@
                 }
             ],
             "outcomeText": "You claimed a conflict. He thinks you aren't 'curious'."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-029",
@@ -13205,7 +13459,8 @@
                 }
             ],
             "outcomeText": "It is now brown and crunchy. A monument to neglect."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-030",
@@ -13243,7 +13498,8 @@
                 }
             ],
             "outcomeText": "You said you like bread. No follow-up questions. Success."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-031",
@@ -13281,7 +13537,8 @@
                 }
             ],
             "outcomeText": "All you hear is typing and sighing. The sound of despair."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-032",
@@ -13319,7 +13576,8 @@
                 }
             ],
             "outcomeText": "You used a Bic ballpoint. It splotched. You resent Gary."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-033",
@@ -13357,7 +13615,8 @@
                 }
             ],
             "outcomeText": "HR said it's 'temporary'. It lasted 6 months."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-034",
@@ -13395,7 +13654,8 @@
                 }
             ],
             "outcomeText": "It took an hour to print plastic. You held it."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-035",
@@ -13433,7 +13693,8 @@
                 }
             ],
             "outcomeText": "You avoided eye contact. You are safe but pathetic."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-036",
@@ -13472,7 +13733,8 @@
                 }
             ],
             "outcomeText": "You found the code on a sticky note. The red is vibrant. You are elite."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-037",
@@ -13510,7 +13772,8 @@
                 }
             ],
             "outcomeText": "You bought a cheap one. It broke instantly, but you stayed mostly dry."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-038",
@@ -13548,7 +13811,8 @@
                 }
             ],
             "outcomeText": "You joined the problem. Anarchy is the only law."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-039",
@@ -13586,7 +13850,8 @@
                 }
             ],
             "outcomeText": "You click and wait. You click and wait. Life passes you by."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "gen-adv-040",
@@ -13624,7 +13889,8 @@
                 }
             ],
             "outcomeText": "You walked in the rain. Virtue is wet."
-        }
+        },
+        "type": "standard"
     },
     {
         "id": "consultant-001",
@@ -13674,7 +13940,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-002",
@@ -13720,7 +13987,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-003",
@@ -13766,7 +14034,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-004",
@@ -13812,7 +14081,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-005",
@@ -13858,7 +14128,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-006",
@@ -13904,7 +14175,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-007",
@@ -13950,7 +14222,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-008",
@@ -13996,7 +14269,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-009",
@@ -14034,7 +14308,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-010",
@@ -14084,7 +14359,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-011",
@@ -14130,7 +14406,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-012",
@@ -14168,7 +14445,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-013",
@@ -14214,7 +14492,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-014",
@@ -14260,7 +14539,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-015",
@@ -14310,7 +14590,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-016",
@@ -14352,7 +14633,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-017",
@@ -14398,7 +14680,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-018",
@@ -14444,7 +14727,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-019",
@@ -14490,7 +14774,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-020",
@@ -14536,7 +14821,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-021",
@@ -14586,7 +14872,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-022",
@@ -14632,7 +14919,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-023",
@@ -14678,7 +14966,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-024",
@@ -14720,7 +15009,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-025",
@@ -14762,7 +15052,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-026",
@@ -14812,7 +15103,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-027",
@@ -14854,7 +15146,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-028",
@@ -14900,7 +15193,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-029",
@@ -14946,7 +15240,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-030",
@@ -14992,7 +15287,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-031",
@@ -15034,7 +15330,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-032",
@@ -15080,7 +15377,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-033",
@@ -15126,7 +15424,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-034",
@@ -15172,7 +15471,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-035",
@@ -15214,7 +15514,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-036",
@@ -15264,7 +15565,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-037",
@@ -15310,7 +15612,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-038",
@@ -15356,7 +15659,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-039",
@@ -15402,7 +15706,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-040",
@@ -15448,7 +15753,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-041",
@@ -15490,7 +15796,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-042",
@@ -15536,7 +15843,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-043",
@@ -15582,7 +15890,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-044",
@@ -15628,7 +15937,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-045",
@@ -15674,7 +15984,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-046",
@@ -15720,7 +16031,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-047",
@@ -15766,7 +16078,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-048",
@@ -15812,7 +16125,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-049",
@@ -15858,7 +16172,8 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     },
     {
         "id": "consultant-050",
@@ -15904,6 +16219,7 @@
         },
         "personas": [
             "consultant"
-        ]
+        ],
+        "type": "standard"
     }
 ]

@@ -63,8 +63,8 @@ export function selectCard(
 
     // 1. Analyze History for Special Cards
     const playedCards = history.map(h => cards.find(c => c.id === h.cardId)).filter((c): c is Card => !!c);
-    const doomsdayCount = playedCards.filter(c => c.tags.includes('doomsday')).length;
-    const angelCount = playedCards.filter(c => c.tags.includes('angel')).length;
+    const doomsdayCount = playedCards.filter(c => c.type === 'doomsday').length;
+    const angelCount = playedCards.filter(c => c.type === 'angel').length;
 
     let forceType: 'doomsday' | 'angel' | null = null;
 
@@ -85,9 +85,9 @@ export function selectCard(
     let pool: Card[] = [];
 
     if (forceType === 'doomsday') {
-        pool = cards.filter(c => c.tags.includes('doomsday'));
+        pool = cards.filter(c => c.type === 'doomsday');
     } else if (forceType === 'angel') {
-        pool = cards.filter(c => c.tags.includes('angel'));
+        pool = cards.filter(c => c.type === 'angel');
     } else {
         // Standard Gameplay: 2:1 Ratio (Generic : Specific)
         // 33% chance for Specific, 66% chance for Generic
@@ -102,23 +102,23 @@ export function selectCard(
             pool = cards.filter(c =>
                 c.personas?.includes(currentPersona) &&
                 !c.personas?.includes('generic') &&
-                !c.tags.includes('doomsday') &&
-                !c.tags.includes('angel')
+                c.type !== 'doomsday' &&
+                c.type !== 'angel'
             );
             // Fallback if empty specific pool
             if (pool.length === 0) {
                 pool = cards.filter(c =>
                     (c.personas?.includes('generic') || !c.personas || c.personas.length === 0) &&
-                    !c.tags.includes('doomsday') &&
-                    !c.tags.includes('angel')
+                    c.type !== 'doomsday' &&
+                    c.type !== 'angel'
                 );
             }
         } else {
             // Generic Pool
             pool = cards.filter(c =>
                 (c.personas?.includes('generic') || !c.personas || c.personas.length === 0) &&
-                !c.tags.includes('doomsday') &&
-                !c.tags.includes('angel')
+                c.type !== 'doomsday' &&
+                c.type !== 'angel'
             );
         }
     }
