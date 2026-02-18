@@ -4564,9 +4564,6 @@
             ],
             "outcomeText": "You're seen as not a team player during tough times."
         },
-        "personas": [
-            "generic"
-        ],
         "type": "doomsday"
     },
     {
@@ -4599,9 +4596,6 @@
             ],
             "outcomeText": "Excuses don't land well. Trust erodes."
         },
-        "personas": [
-            "generic"
-        ],
         "type": "doomsday"
     },
     {
@@ -4638,9 +4632,6 @@
             ],
             "outcomeText": "You're labeled as 'difficult' during austerity measures."
         },
-        "personas": [
-            "business-associate"
-        ],
         "type": "doomsday"
     },
     {
@@ -4673,9 +4664,6 @@
             ],
             "outcomeText": "The client escalates. Management is not pleased."
         },
-        "personas": [
-            "business-associate"
-        ],
         "type": "doomsday"
     },
     {
@@ -4712,9 +4700,6 @@
             ],
             "outcomeText": "You couldn't handle it alone. That's noted."
         },
-        "personas": [
-            "generic"
-        ],
         "type": "doomsday"
     },
     {
@@ -4747,9 +4732,6 @@
             ],
             "outcomeText": "In a reorg, demanding preferences is frowned upon."
         },
-        "personas": [
-            "generic"
-        ],
         "type": "doomsday"
     },
     {
@@ -4786,9 +4768,6 @@
             ],
             "outcomeText": "Damage control consumes your every waking hour."
         },
-        "personas": [
-            "generic"
-        ],
         "type": "doomsday"
     },
     {
@@ -4825,9 +4804,6 @@
             ],
             "outcomeText": "Both sides now distrust you. Worse than picking a side."
         },
-        "personas": [
-            "generic"
-        ],
         "type": "doomsday"
     },
     {
@@ -4864,9 +4840,6 @@
             ],
             "outcomeText": "Challenging feedback makes you look defensive."
         },
-        "personas": [
-            "generic"
-        ],
         "type": "doomsday"
     },
     {
@@ -4899,9 +4872,6 @@
             ],
             "outcomeText": "The new {{manager}} sees you as resistant to change."
         },
-        "personas": [
-            "generic"
-        ],
         "type": "doomsday"
     },
     {
@@ -4938,9 +4908,6 @@
             ],
             "outcomeText": "Out of sight, possibly out of mind. Risky strategy."
         },
-        "personas": [
-            "product-manager"
-        ],
         "type": "doomsday"
     },
     {
@@ -4973,9 +4940,6 @@
             ],
             "outcomeText": "They needed a yes-person. You weren't it."
         },
-        "personas": [
-            "generic"
-        ],
         "type": "doomsday"
     },
     {
@@ -5012,9 +4976,6 @@
             ],
             "outcomeText": "The project suffered. Questions about your commitment arise."
         },
-        "personas": [
-            "generic"
-        ],
         "type": "doomsday"
     },
     {
@@ -5051,9 +5012,6 @@
             ],
             "outcomeText": "Your request is denied. You're now on a list."
         },
-        "personas": [
-            "generic"
-        ],
         "type": "doomsday"
     },
     {
@@ -5086,10 +5044,6 @@
             ],
             "outcomeText": "The truth came out anyway. Trust is broken."
         },
-        "personas": [
-            "developer",
-            "analyst"
-        ],
         "type": "doomsday"
     },
     {
@@ -5122,9 +5076,6 @@
             ],
             "outcomeText": "You're seen as unhelpful when the team needed you."
         },
-        "personas": [
-            "generic"
-        ],
         "type": "doomsday"
     },
     {
@@ -5161,9 +5112,6 @@
             ],
             "outcomeText": "Request denied. You're now on leadership's radar negatively."
         },
-        "personas": [
-            "generic"
-        ],
         "type": "doomsday"
     },
     {
@@ -5200,9 +5148,6 @@
             ],
             "outcomeText": "Your inexperience shows. Mistakes pile up."
         },
-        "personas": [
-            "generic"
-        ],
         "type": "doomsday"
     },
     {
@@ -5235,9 +5180,6 @@
             ],
             "outcomeText": "Escalating against a powerful person rarely ends well."
         },
-        "personas": [
-            "product-manager"
-        ],
         "type": "doomsday"
     },
     {
@@ -5274,9 +5216,6 @@
             ],
             "outcomeText": "In crisis times, boundaries look like abandonment."
         },
-        "personas": [
-            "generic"
-        ],
         "type": "doomsday"
     },
     {
@@ -6892,9 +6831,6 @@
             ],
             "outcomeText": "Treat yo' self! The endorphins are real."
         },
-        "personas": [
-            "generic"
-        ],
         "type": "angel"
     },
     {
@@ -6931,10 +6867,6 @@
             ],
             "outcomeText": "The spotlight is on you. Don't sweat."
         },
-        "personas": [
-            "developer",
-            "product-manager"
-        ],
         "type": "angel"
     },
     {
@@ -6971,9 +6903,6 @@
             ],
             "outcomeText": "A moment of calm before the next storm."
         },
-        "personas": [
-            "generic"
-        ],
         "type": "angel"
     },
     {
@@ -7010,9 +6939,6 @@
             ],
             "outcomeText": "Influence gained. Use it wisely."
         },
-        "personas": [
-            "product-manager"
-        ],
         "type": "angel"
     },
     {
@@ -7049,9 +6975,6 @@
             ],
             "outcomeText": "The executives nodded in approval. That's worth gold."
         },
-        "personas": [
-            "generic"
-        ],
         "type": "angel"
     },
     {
@@ -7084,9 +7007,6 @@
             ],
             "outcomeText": "You optimized your workflow beautifully."
         },
-        "personas": [
-            "developer"
-        ],
         "type": "angel"
     },
     {
@@ -7123,9 +7043,6 @@
             ],
             "outcomeText": "A star is born. Or at least, a star employee."
         },
-        "personas": [
-            "business-associate"
-        ],
         "type": "angel"
     },
     {
@@ -7162,9 +7079,6 @@
             ],
             "outcomeText": "You chose sanity. A bold strategy."
         },
-        "personas": [
-            "business-associate"
-        ],
         "type": "angel"
     },
     {
@@ -7201,12 +7115,6 @@
             ],
             "outcomeText": "Financial freedom inches closer."
         },
-        "personas": [
-            "developer",
-            "product-manager",
-            "analyst",
-            "business-associate"
-        ],
         "type": "angel"
     },
     {
@@ -7243,9 +7151,6 @@
             ],
             "outcomeText": "You are the main character today."
         },
-        "personas": [
-            "generic"
-        ],
         "type": "angel"
     },
     {
@@ -7282,9 +7187,6 @@
             ],
             "outcomeText": "Schedule cleared. A rare victory."
         },
-        "personas": [
-            "generic"
-        ],
         "type": "angel"
     },
     {
@@ -7317,9 +7219,6 @@
             ],
             "outcomeText": "Success has a flavor, and it tastes like approval."
         },
-        "personas": [
-            "business-associate"
-        ],
         "type": "angel"
     },
     {
@@ -7356,9 +7255,6 @@
             ],
             "outcomeText": "You have capacity! Keep that secret."
         },
-        "personas": [
-            "business-associate"
-        ],
         "type": "angel"
     },
     {
@@ -7395,12 +7291,6 @@
             ],
             "outcomeText": "Leadership noticed. Try not to mess up now."
         },
-        "personas": [
-            "developer",
-            "product-manager",
-            "analyst",
-            "business-associate"
-        ],
         "type": "angel"
     },
     {
@@ -7437,12 +7327,6 @@
             ],
             "outcomeText": "Success has a flavor, and it tastes like approval."
         },
-        "personas": [
-            "developer",
-            "product-manager",
-            "analyst",
-            "business-associate"
-        ],
         "type": "angel"
     },
     {
@@ -7475,9 +7359,6 @@
             ],
             "outcomeText": "You played the game and won this round."
         },
-        "personas": [
-            "developer"
-        ],
         "type": "angel"
     },
     {
@@ -7514,9 +7395,6 @@
             ],
             "outcomeText": "Burnout delayed by another week."
         },
-        "personas": [
-            "business-associate"
-        ],
         "type": "angel"
     },
     {
@@ -7553,9 +7431,6 @@
             ],
             "outcomeText": "The backlog shrinks. A miracle."
         },
-        "personas": [
-            "developer"
-        ],
         "type": "angel"
     },
     {
@@ -7592,9 +7467,6 @@
             ],
             "outcomeText": "A moment of calm before the next storm."
         },
-        "personas": [
-            "developer"
-        ],
         "type": "angel"
     },
     {
@@ -7631,12 +7503,6 @@
             ],
             "outcomeText": "Investing wisely. Future you says thanks."
         },
-        "personas": [
-            "developer",
-            "product-manager",
-            "analyst",
-            "business-associate"
-        ],
         "type": "angel"
     },
     {
