@@ -14,6 +14,7 @@ const PERSONAS: { id: Persona; icon: string; name: string; description: string }
     { id: 'business-associate', icon: '💼', name: 'Business Associate', description: 'Drive operations, build relationships' },
     { id: 'consultant', icon: '🧳', name: 'Consultant', description: 'Advise clients, deliver projects' },
     { id: 'marketing-manager', icon: '📣', name: 'Marketer', description: 'Build brands, drive campaigns' },
+    { id: 'operations-associate', icon: '⚙️', name: 'Operations Associate', description: 'Optimize processes, keep things running' },
 ];
 
 export function PersonaScreen({ onSelect, onBack }: PersonaScreenProps) {

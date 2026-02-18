@@ -13,7 +13,7 @@ export interface Choice {
   outcomeText?: string;
 }
 
-export type Persona = 'developer' | 'product-manager' | 'analyst' | 'business-associate' | 'consultant' | 'marketing-manager';
+export type Persona = 'developer' | 'product-manager' | 'analyst' | 'business-associate' | 'consultant' | 'marketing-manager' | 'operations-associate';
 
 export type CardType = 'standard' | 'doomsday' | 'angel';
 
