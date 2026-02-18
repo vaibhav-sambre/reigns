@@ -12,6 +12,7 @@ const PERSONAS: { id: Persona; icon: string; name: string; description: string }
     { id: 'developer', icon: '💻', name: 'Developer', description: 'Build features, ship code' },
     { id: 'analyst', icon: '📊', name: 'Analyst', description: 'Crunch data, drive insights' },
     { id: 'business-associate', icon: '💼', name: 'Business Associate', description: 'Drive operations, build relationships' },
+    { id: 'consultant', icon: '🧳', name: 'Consultant', description: 'Advise clients, deliver projects' },
 ];
 
 export function PersonaScreen({ onSelect, onBack }: PersonaScreenProps) {

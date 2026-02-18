@@ -13,7 +13,7 @@ export interface Choice {
   outcomeText?: string;
 }
 
-export type Persona = 'developer' | 'product-manager' | 'analyst' | 'business-associate';
+export type Persona = 'developer' | 'product-manager' | 'analyst' | 'business-associate' | 'consultant';
 
 export interface Card {
   id: string;
