@@ -13,6 +13,7 @@ const PERSONAS: { id: Persona; icon: string; name: string; description: string }
     { id: 'analyst', icon: '📊', name: 'Analyst', description: 'Crunch data, drive insights' },
     { id: 'business-associate', icon: '💼', name: 'Business Associate', description: 'Drive operations, build relationships' },
     { id: 'consultant', icon: '🧳', name: 'Consultant', description: 'Advise clients, deliver projects' },
+    { id: 'marketing-manager', icon: '📣', name: 'Marketing Manager', description: 'Build brands, drive campaigns' },
 ];
 
 export function PersonaScreen({ onSelect, onBack }: PersonaScreenProps) {
