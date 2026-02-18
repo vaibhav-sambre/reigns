@@ -7,6 +7,7 @@ import { GameScreen } from './ui/screens/GameScreen';
 import { GameOverScreen } from './ui/screens/GameOverScreen';
 import { PromotionScreen } from './ui/screens/PromotionScreen';
 import { IntroScreen } from './ui/screens/IntroScreen';
+import { PersonaScreen } from './ui/screens/PersonaScreen';
 import { NameInputScreen } from './ui/screens/NameInputScreen';
 import { AdminLayout, CardList, CardEditor, Settings, ImportExport } from './admin';
 import type { Persona } from './engine/types';
@@ -16,29 +17,45 @@ import './App.css';
 function GameWrapper() {
   const { gameState, isLoading, startNewGame, showIntro, dismissIntro } = useGame();
   const [selectedPersona, setSelectedPersona] = useState<Persona | null>(null);
+  const [showPersonaScreen, setShowPersonaScreen] = useState(false);
 
-  // Flow: Intro -> NameInput -> Game
+  // Flow: Intro -> PersonaScreen -> NameInput -> Game
 
   if (showIntro) {
-    // If persona selected, show name input
+    // Step 3: Persona selected, show name input
     if (selectedPersona) {
       return (
         <NameInputScreen
           persona={selectedPersona}
           onComplete={(names) => {
             startNewGame(selectedPersona, names);
-            setSelectedPersona(null); // Reset for next time
+            setSelectedPersona(null);
+            setShowPersonaScreen(false);
             dismissIntro();
           }}
         />
       );
     }
 
-    // Otherwise show intro (persona selection)
+    // Step 2: Show persona selection
+    if (showPersonaScreen) {
+      return (
+        <PersonaScreen
+          onSelect={(persona) => {
+            setSelectedPersona(persona);
+          }}
+          onBack={() => {
+            setShowPersonaScreen(false);
+          }}
+        />
+      );
+    }
+
+    // Step 1: Show intro/rules
     return (
       <IntroScreen
-        onStart={(persona) => {
-          setSelectedPersona(persona);
+        onContinue={() => {
+          setShowPersonaScreen(true);
         }}
       />
     );

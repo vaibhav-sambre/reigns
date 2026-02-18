@@ -1,18 +1,10 @@
-import { useState } from 'react';
-import type { Persona } from '../../engine/types';
 import './IntroScreen.css';
 
 interface IntroScreenProps {
-    onStart: (persona: Persona) => void;
+    onContinue: () => void;
 }
 
-export function IntroScreen({ onStart }: IntroScreenProps) {
-    const [selectedPersona, setSelectedPersona] = useState<Persona>('developer');
-
-    const handlePersonaSelect = (persona: Persona) => {
-        setSelectedPersona(persona);
-    };
-
+export function IntroScreen({ onContinue }: IntroScreenProps) {
     return (
         <div className="intro-screen">
             <div className="intro-content">
@@ -21,40 +13,6 @@ export function IntroScreen({ onStart }: IntroScreenProps) {
                     <h1 className="intro-title">Office Reigns</h1>
                     <p className="intro-subtitle">Navigate your corporate career</p>
                 </header>
-
-                <section className="intro-persona">
-                    <h2>Select Your Role</h2>
-                    <div className="persona-grid">
-                        <button
-                            className={`persona-card ${selectedPersona === 'product-manager' ? 'selected' : ''}`}
-                            onClick={() => handlePersonaSelect('product-manager')}
-                        >
-                            <span className="persona-icon">📅</span>
-                            <span className="persona-name">Product Manager</span>
-                        </button>
-                        <button
-                            className={`persona-card ${selectedPersona === 'developer' ? 'selected' : ''}`}
-                            onClick={() => handlePersonaSelect('developer')}
-                        >
-                            <span className="persona-icon">💻</span>
-                            <span className="persona-name">Developer</span>
-                        </button>
-                        <button
-                            className={`persona-card ${selectedPersona === 'analyst' ? 'selected' : ''}`}
-                            onClick={() => handlePersonaSelect('analyst')}
-                        >
-                            <span className="persona-icon">📊</span>
-                            <span className="persona-name">Analyst</span>
-                        </button>
-                        <button
-                            className={`persona-card ${selectedPersona === 'business-associate' ? 'selected' : ''}`}
-                            onClick={() => handlePersonaSelect('business-associate')}
-                        >
-                            <span className="persona-icon">💼</span>
-                            <span className="persona-name">Business Associate</span>
-                        </button>
-                    </div>
-                </section>
 
                 <section className="intro-instructions">
                     <h2>How to Play</h2>
@@ -101,8 +59,8 @@ export function IntroScreen({ onStart }: IntroScreenProps) {
                     </div>
                 </section>
 
-                <button className="start-button" onClick={() => onStart(selectedPersona)}>
-                    Start Career as {selectedPersona.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}
+                <button className="start-button" onClick={onContinue}>
+                    Choose Your Role →
                 </button>
             </div>
         </div>
