@@ -10,7 +10,7 @@ interface PersonaScreenProps {
 const PERSONAS: { id: Persona; icon: string; name: string; description: string }[] = [
     { id: 'product-manager', icon: '📅', name: 'Product Manager', description: 'Lead products, manage stakeholders' },
     { id: 'developer', icon: '💻', name: 'Developer', description: 'Build features, ship code' },
-    { id: 'analyst', icon: '📊', name: 'Analyst', description: 'Crunch data, drive insights' },
+    { id: 'analyst', icon: '📊', name: 'Data Analyst', description: 'Crunch data, drive insights' },
     { id: 'business-associate', icon: '💼', name: 'Business Analyst', description: 'Drive operations, build relationships' },
     { id: 'consultant', icon: '🧳', name: 'Consultant', description: 'Advise clients, deliver projects' },
     { id: 'marketing-manager', icon: '📣', name: 'Marketer', description: 'Build brands, drive campaigns' },
