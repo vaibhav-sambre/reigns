@@ -48,7 +48,7 @@ export function PersonaScreen({ onSelect, onBack }: PersonaScreenProps) {
                         ← Back
                     </button>
                     <button className="persona-screen__start" onClick={() => onSelect(selectedPersona)}>
-                        Continue as {selectedPersona.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')} →
+                        Continue as {PERSONAS.find(p => p.id === selectedPersona)?.name} →
                     </button>
                 </div>
             </div>
