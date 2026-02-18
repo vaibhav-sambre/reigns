@@ -5496,7 +5496,8 @@
             "outcomeText": "You remembered you have a life outside work."
         },
         "personas": [
-            "generic"
+            "developer",
+            "analyst"
         ]
     },
     {
@@ -5534,7 +5535,9 @@
             "outcomeText": "Finally, time to focus on what matters."
         },
         "personas": [
-            "generic"
+            "developer",
+            "product-manager",
+            "analyst"
         ]
     },
     {
@@ -5572,7 +5575,9 @@
             "outcomeText": "Schedule cleared. A rare victory."
         },
         "personas": [
-            "generic"
+            "product-manager",
+            "analyst",
+            "business-associate"
         ]
     },
     {
@@ -5610,7 +5615,7 @@
             "outcomeText": "You prioritized the backlog over hiring. The team remains understaffed, but at least your ticket is done."
         },
         "personas": [
-            "generic"
+            "developer"
         ]
     },
     {
@@ -5878,7 +5883,8 @@
             "outcomeText": "Bridge burned. Hope you didn't need to cross it."
         },
         "personas": [
-            "generic"
+            "developer",
+            "product-manager"
         ]
     },
     {
@@ -5916,7 +5922,7 @@
             "outcomeText": "Health is wealth, and you just got paid."
         },
         "personas": [
-            "generic"
+            "developer"
         ]
     },
     {
@@ -6106,7 +6112,10 @@
             "outcomeText": "A star is born. Or at least, a star employee."
         },
         "personas": [
-            "generic"
+            "developer",
+            "product-manager",
+            "analyst",
+            "business-associate"
         ]
     },
     {
@@ -6182,7 +6191,7 @@
             "outcomeText": "Breathing room secured."
         },
         "personas": [
-            "generic"
+            "developer"
         ]
     },
     {
@@ -6526,7 +6535,7 @@
             "outcomeText": "Schedule cleared. A rare victory."
         },
         "personas": [
-            "generic"
+            "developer"
         ]
     },
     {
@@ -6957,7 +6966,7 @@
             "outcomeText": "You optimized your workflow beautifully."
         },
         "personas": [
-            "generic"
+            "developer"
         ]
     },
     {
@@ -7077,7 +7086,10 @@
             "outcomeText": "Financial freedom inches closer."
         },
         "personas": [
-            "generic"
+            "developer",
+            "product-manager",
+            "analyst",
+            "business-associate"
         ]
     },
     {
@@ -7273,7 +7285,10 @@
             "outcomeText": "Leadership noticed. Try not to mess up now."
         },
         "personas": [
-            "generic"
+            "developer",
+            "product-manager",
+            "analyst",
+            "business-associate"
         ]
     },
     {
@@ -7313,7 +7328,10 @@
             "outcomeText": "Success has a flavor, and it tastes like approval."
         },
         "personas": [
-            "generic"
+            "developer",
+            "product-manager",
+            "analyst",
+            "business-associate"
         ]
     },
     {
@@ -7349,7 +7367,7 @@
             "outcomeText": "You played the game and won this round."
         },
         "personas": [
-            "generic"
+            "developer"
         ]
     },
     {
@@ -7429,7 +7447,7 @@
             "outcomeText": "The backlog shrinks. A miracle."
         },
         "personas": [
-            "generic"
+            "developer"
         ]
     },
     {
@@ -7469,7 +7487,7 @@
             "outcomeText": "A moment of calm before the next storm."
         },
         "personas": [
-            "generic"
+            "developer"
         ]
     },
     {
@@ -7509,7 +7527,10 @@
             "outcomeText": "Investing wisely. Future you says thanks."
         },
         "personas": [
-            "generic"
+            "developer",
+            "product-manager",
+            "analyst",
+            "business-associate"
         ]
     },
     {
@@ -12540,7 +12561,8 @@
         "id": "gen-adv-013",
         "track": "IC",
         "personas": [
-            "generic"
+            "developer",
+            "analyst"
         ],
         "tags": [],
         "title": "Software Update",
@@ -12844,7 +12866,8 @@
         "id": "gen-adv-021",
         "track": "IC",
         "personas": [
-            "generic"
+            "developer",
+            "product-manager"
         ],
         "tags": [],
         "title": "New Tool",
@@ -12958,7 +12981,9 @@
         "id": "gen-adv-024",
         "track": "IC",
         "personas": [
-            "generic"
+            "developer",
+            "product-manager",
+            "analyst"
         ],
         "tags": [],
         "title": "Wiki Rot",
@@ -13414,7 +13439,8 @@
         "id": "gen-adv-036",
         "track": "IC",
         "personas": [
-            "generic"
+            "product-manager",
+            "analyst"
         ],
         "tags": [],
         "title": "Print Quota",
@@ -13528,7 +13554,7 @@
         "id": "gen-adv-039",
         "track": "IC",
         "personas": [
-            "generic"
+            "developer"
         ],
         "tags": [],
         "title": "Slow Laptop",
