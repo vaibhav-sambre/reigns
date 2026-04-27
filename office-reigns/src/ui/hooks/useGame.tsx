@@ -5,6 +5,7 @@ import {
     useContext,
     useReducer,
     useEffect,
+    useRef,
     useState,
     type ReactNode,
 } from 'react';
@@ -33,8 +34,7 @@ type GameAction =
     | { type: 'INIT'; payload: { state: GameState; cards: Card[] } }
     | { type: 'MAKE_DECISION'; payload: { choice: 'left' | 'right' } }
     | { type: 'NEW_GAME' }
-    | { type: 'DRAW_CARD' }
-    | { type: 'SET_SETTINGS'; payload: PromotionSettings };
+    | { type: 'DRAW_CARD' };
 
 interface GameContextState {
     gameState: GameState | null;
@@ -126,17 +126,6 @@ function gameReducer(
             };
         }
 
-        case 'SET_SETTINGS': {
-            if (!state.gameState) return state;
-            return {
-                ...state,
-                gameState: {
-                    ...state.gameState,
-                    promotionSettings: action.payload,
-                },
-            };
-        }
-
         default:
             return state;
     }
@@ -164,10 +153,6 @@ export function GameProvider({ children }: { children: ReactNode }) {
         const playing = toggleBackgroundMusic();
         setIsMusicPlaying(playing);
     };
-
-
-
-    // ... existing code
 
     // Initialize on mount
     useEffect(() => {
@@ -219,8 +204,6 @@ export function GameProvider({ children }: { children: ReactNode }) {
         }
     }, [state.gameState, state.currentCard]);
 
-
-
     // Persist game state changes
     useEffect(() => {
         if (state.gameState && !state.isLoading) {
@@ -228,23 +211,20 @@ export function GameProvider({ children }: { children: ReactNode }) {
         }
     }, [state.gameState, state.isLoading]);
 
-
-
-    // ...
+    // Play sound based on game state changes after each decision
+    const prevWeekRef = useRef<number | undefined>(undefined);
+    useEffect(() => {
+        if (!state.gameState) return;
+        const { week, status } = state.gameState;
+        if (prevWeekRef.current !== undefined && week !== prevWeekRef.current) {
+            if (status === 'promoted') playSound('promote');
+            else if (status === 'game-over') playSound('game-over');
+            else playSound('select');
+        }
+        prevWeekRef.current = week;
+    }, [state.gameState?.week, state.gameState?.status]);
 
     const makeDecision = (choice: 'left' | 'right') => {
-        // Play sound based on outcome
-        if (state.gameState && state.currentCard) {
-            const nextState = advanceWeek(state.gameState, state.currentCard, choice);
-            if (nextState.status === 'promoted') {
-                playSound('promote');
-            } else if (nextState.status === 'game-over') {
-                playSound('game-over');
-            } else {
-                playSound('select');
-            }
-        }
-
         dispatch({ type: 'MAKE_DECISION', payload: { choice } });
         setShowOutcome(true);
     };

@@ -141,28 +141,6 @@ export function filterCardsByTrack(cards: Card[], track: 'IC' | 'Manager'): Card
 }
 
 /**
- * Filter cards by tag
- */
-export function filterCardsByTag(cards: Card[], tag: string): Card[] {
-    return cards.filter((card) => card.tags.includes(tag));
-}
-
-/**
- * Shuffle an array using Fisher-Yates algorithm with optional seed
- */
-export function shuffleArray<T>(array: T[], seed?: number): T[] {
-    const result = [...array];
-    const rng = seed !== undefined ? createSeededRng(seed) : Math.random;
-
-    for (let i = result.length - 1; i > 0; i--) {
-        const j = Math.floor((typeof rng === 'function' ? rng() : Math.random()) * (i + 1));
-        [result[i], result[j]] = [result[j], result[i]];
-    }
-
-    return result;
-}
-
-/**
  * Filter cards by persona
  * Cards are included if:
  * 1. They have no persona tags (undefined or empty)

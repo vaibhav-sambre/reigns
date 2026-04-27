@@ -2,17 +2,12 @@
 
 import { useState, useEffect } from 'react';
 import type { PromotionSettings } from '../engine/types';
+import { DEFAULT_PROMOTION_SETTINGS } from '../engine/types';
 import { getPromotionSettings, savePromotionSettings } from '../persistence/db';
 import './Settings.css';
 
 export function Settings() {
-    const [settings, setSettings] = useState<PromotionSettings>({
-        minWeek: 40,
-        minPillarsAbove60: 3,
-        maxPillarsBelow30: 0,
-        mode: 'card-only',
-    });
-    const [rngSeed, setRngSeed] = useState<string>('');
+    const [settings, setSettings] = useState<PromotionSettings>(DEFAULT_PROMOTION_SETTINGS);
     const [saved, setSaved] = useState(false);
 
     useEffect(() => {
@@ -55,7 +50,7 @@ export function Settings() {
                 </div>
 
                 <div className="settings__field">
-                    <label>Pillars Above 60%:</label>
+                    <label>Pillars Above 70%:</label>
                     <input
                         type="number"
                         value={settings.minPillarsAbove60}
@@ -65,7 +60,7 @@ export function Settings() {
                         min={0}
                         max={4}
                     />
-                    <small>Number of pillars that must be above 60%</small>
+                    <small>Number of pillars that must be above 70%</small>
                 </div>
 
                 <div className="settings__field">
@@ -112,24 +107,6 @@ export function Settings() {
                             <small>Promote as soon as eligibility criteria are met</small>
                         </span>
                     </label>
-                </div>
-            </div>
-
-            <div className="settings__section">
-                <h3>Testing</h3>
-                <p className="settings__description">
-                    Options for testing and debugging.
-                </p>
-
-                <div className="settings__field">
-                    <label>RNG Seed (optional):</label>
-                    <input
-                        type="text"
-                        value={rngSeed}
-                        onChange={(e) => setRngSeed(e.target.value)}
-                        placeholder="Leave empty for random"
-                    />
-                    <small>Set a seed for deterministic card selection (for testing)</small>
                 </div>
             </div>
 

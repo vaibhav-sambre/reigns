@@ -21,33 +21,11 @@ import { DEFAULT_CHARACTER_NAMES } from './utils';
 import { isEligibleForPromotion } from './promotion';
 
 /**
- * Create initial pillar state with all values at 50
+ * Create initial pillar state with balanced random values.
+ * Starts at [50,50,50,50] and performs up to 10 swaps of 5 points
+ * between random pairs, keeping each pillar in [30, 70] and sum at 200.
  */
 export function createInitialPillars(): PillarState {
-    // Balanced Shuffle: Total 225, Range 30-70
-    // This ensures no "God Runs" (all high) or "Doomed Runs" (all low)
-    const TOTAL = 225;
-
-    // Actually, let's use the redistribution method for cleaner integer math
-    let pillars = [
-        Math.random(),
-        Math.random(),
-        Math.random(),
-        Math.random()
-    ];
-
-    const sum = pillars.reduce((a, b) => a + b, 0);
-    pillars = pillars.map(p => Math.round((p / sum) * TOTAL));
-
-    // Fix rounding error to force sum = 200
-    const currentSum = pillars.reduce((a, b) => a + b, 0);
-    pillars[0] += (TOTAL - currentSum);
-
-    // Clamp to 30-70 range (this might break sum=200 slightly, but keeps it safe)
-    // To strictly keep 200 AND range, it's harder.
-    // Let's stick to the "Give and Take" approach.
-    // Start at 50, 50, 50, 50.
-    // Perform 10 swaps of 5 points between random pairs.
     const values = [50, 50, 50, 50];
     for (let i = 0; i < 10; i++) {
         const giver = Math.floor(Math.random() * 4);

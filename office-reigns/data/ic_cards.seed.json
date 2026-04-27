@@ -6452,8 +6452,7 @@
             "effects": [
                 {
                     "pillar": "salary",
-                    "delta": 0,
-                    "nextCard": "offer-card"
+                    "delta": 0
                 },
                 {
                     "pillar": "reputation",

@@ -1,19 +1,13 @@
 // Pillar status bar component with qualitative labels
 
 import { getPillarStatus, type PillarType, type PillarStatus } from '../../engine/types';
+import { PILLAR_LABELS } from '../constants';
 import './PillarBar.css';
 
 interface PillarBarProps {
     pillar: PillarType;
     value: number;
 }
-
-const PILLAR_LABELS: Record<PillarType, string> = {
-    bandwidth: 'Bandwidth',
-    salary: 'Salary',
-    reputation: 'Reputation',
-    life: 'Life',
-};
 
 const STATUS_COLORS: Record<PillarStatus, string> = {
     Critical: '#ef4444',

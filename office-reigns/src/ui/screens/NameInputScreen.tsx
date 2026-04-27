@@ -38,7 +38,9 @@ export function NameInputScreen({ persona, onComplete }: NameInputScreenProps) {
                     case 'product-manager': return 'Group PM';
                     case 'analyst': return 'Analytics Manager';
                     case 'business-associate': return 'Vice President';
-                    default: return 'Manager';
+                    case 'consultant': return 'Engagement Manager';
+                    case 'marketing-manager': return 'Marketing Director';
+                    case 'operations-associate': return 'Operations Manager';
                 }
             case 'lead':
                 switch (persona) {
@@ -46,7 +48,9 @@ export function NameInputScreen({ persona, onComplete }: NameInputScreenProps) {
                     case 'product-manager': return 'Lead PM';
                     case 'analyst': return 'Senior Analyst';
                     case 'business-associate': return 'Engagement Mgr';
-                    default: return 'Team Lead';
+                    case 'consultant': return 'Senior Consultant';
+                    case 'marketing-manager': return 'Brand Strategist';
+                    case 'operations-associate': return 'Ops Lead';
                 }
             case 'colleague':
                 switch (persona) {
@@ -54,7 +58,9 @@ export function NameInputScreen({ persona, onComplete }: NameInputScreenProps) {
                     case 'product-manager': return 'Data Analyst';
                     case 'analyst': return 'Data Scientist';
                     case 'business-associate': return 'Consultant';
-                    default: return 'Colleague';
+                    case 'consultant': return 'Associate';
+                    case 'marketing-manager': return 'Content Strategist';
+                    case 'operations-associate': return 'Process Analyst';
                 }
         }
     };

@@ -14,12 +14,21 @@ describe('createInitialState', () => {
         expect(state.week).toBe(1);
     });
 
-    it('creates state with all pillars at 50', () => {
-        const state = createInitialState();
-        expect(state.pillars.bandwidth).toBe(50);
-        expect(state.pillars.salary).toBe(50);
-        expect(state.pillars.reputation).toBe(50);
-        expect(state.pillars.life).toBe(50);
+    it('creates state with all pillars in range [30, 70] and sum of 200', () => {
+        // Run multiple times since initialisation is random
+        for (let i = 0; i < 20; i++) {
+            const state = createInitialState();
+            const { bandwidth, salary, reputation, life } = state.pillars;
+            expect(bandwidth).toBeGreaterThanOrEqual(30);
+            expect(bandwidth).toBeLessThanOrEqual(70);
+            expect(salary).toBeGreaterThanOrEqual(30);
+            expect(salary).toBeLessThanOrEqual(70);
+            expect(reputation).toBeGreaterThanOrEqual(30);
+            expect(reputation).toBeLessThanOrEqual(70);
+            expect(life).toBeGreaterThanOrEqual(30);
+            expect(life).toBeLessThanOrEqual(70);
+            expect(bandwidth + salary + reputation + life).toBe(200);
+        }
     });
 
     it('creates state with playing status', () => {
@@ -112,26 +121,29 @@ describe('advanceWeek', () => {
         },
     };
 
+    // Use a fixed pillar state so tests aren't affected by random initialisation
+    const knownPillars = { bandwidth: 50, salary: 50, reputation: 50, life: 50 };
+
     it('advances week by 1', () => {
-        const state = createInitialState();
+        const state: GameState = { ...createInitialState(), pillars: knownPillars };
         const newState = advanceWeek(state, testCard, 'left');
         expect(newState.week).toBe(2);
     });
 
     it('applies left choice effects', () => {
-        const state = createInitialState();
+        const state: GameState = { ...createInitialState(), pillars: knownPillars };
         const newState = advanceWeek(state, testCard, 'left');
         expect(newState.pillars.bandwidth).toBe(40);
     });
 
     it('applies right choice effects', () => {
-        const state = createInitialState();
+        const state: GameState = { ...createInitialState(), pillars: knownPillars };
         const newState = advanceWeek(state, testCard, 'right');
         expect(newState.pillars.salary).toBe(60);
     });
 
     it('records decision in history', () => {
-        const state = createInitialState();
+        const state: GameState = { ...createInitialState(), pillars: knownPillars };
         const newState = advanceWeek(state, testCard, 'left');
         expect(newState.decisionHistory).toHaveLength(1);
         expect(newState.decisionHistory[0]).toEqual({
@@ -142,7 +154,7 @@ describe('advanceWeek', () => {
     });
 
     it('adds card to recent cards', () => {
-        const state = createInitialState();
+        const state: GameState = { ...createInitialState(), pillars: knownPillars };
         const newState = advanceWeek(state, testCard, 'left');
         expect(newState.recentCardIds).toContain('test-card-1');
     });

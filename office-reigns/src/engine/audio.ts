@@ -20,7 +20,7 @@ const initAudio = () => {
     return { ctx: audioCtx, master: masterGain };
 };
 
-export type SoundType = 'select' | 'swipe' | 'success' | 'failure' | 'game-over' | 'promote';
+export type SoundType = 'select' | 'swipe' | 'game-over' | 'promote';
 
 export function playSound(type: SoundType) {
     try {
@@ -56,24 +56,6 @@ export function playSound(type: SoundType) {
                 gain.gain.linearRampToValueAtTime(0.01, now + 0.2);
                 osc.start(now);
                 osc.stop(now + 0.2);
-                break;
-
-            case 'success':
-                // Major chord arpeggio
-                playNote(ctx, master, 523.25, now, 0.1, 'sine'); // C5
-                playNote(ctx, master, 659.25, now + 0.1, 0.1, 'sine'); // E5
-                playNote(ctx, master, 783.99, now + 0.2, 0.2, 'sine'); // G5
-                break;
-
-            case 'failure':
-                // Buzzer
-                osc.type = 'sawtooth';
-                osc.frequency.setValueAtTime(150, now);
-                osc.frequency.linearRampToValueAtTime(100, now + 0.3);
-                gain.gain.setValueAtTime(0.3, now);
-                gain.gain.exponentialRampToValueAtTime(0.01, now + 0.3);
-                osc.start(now);
-                osc.stop(now + 0.3);
                 break;
 
             case 'game-over':

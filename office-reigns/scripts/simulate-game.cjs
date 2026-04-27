@@ -25,10 +25,10 @@ function getZeroPillar(pillars) {
 }
 
 function selectCard(cards, recentIds, history, week, persona) {
-    // 1. Forced Injection
+    // 1. Forced Injection — uses type field (not tags)
     const playedCards = history.map(h => cards.find(c => c.id === h.cardId)).filter(Boolean);
-    const doomsdayCount = playedCards.filter(c => c.tags.includes('doomsday')).length;
-    const angelCount = playedCards.filter(c => c.tags.includes('angel')).length;
+    const doomsdayCount = playedCards.filter(c => c.type === 'doomsday').length;
+    const angelCount = playedCards.filter(c => c.type === 'angel').length;
 
     let forceType = null;
     if (week > 15 && doomsdayCount < 1) forceType = 'doomsday';
@@ -42,16 +42,26 @@ function selectCard(cards, recentIds, history, week, persona) {
     }
 
     let pool = [];
-    if (forceType === 'doomsday') pool = cards.filter(c => c.tags.includes('doomsday'));
-    else if (forceType === 'angel') pool = cards.filter(c => c.tags.includes('angel'));
+    if (forceType === 'doomsday') pool = cards.filter(c => c.type === 'doomsday');
+    else if (forceType === 'angel') pool = cards.filter(c => c.type === 'angel');
     else {
         // 2:1 Ratio
         const isSpecific = Math.random() < 0.33;
         if (isSpecific) {
-            pool = cards.filter(c => c.personas && c.personas.includes(persona) && !c.personas.includes('generic') && !c.tags.includes('doomsday') && !c.tags.includes('angel'));
-            if (pool.length === 0) pool = cards.filter(c => (!c.personas || c.personas.includes('generic')) && !c.tags.includes('doomsday') && !c.tags.includes('angel'));
+            pool = cards.filter(c =>
+                c.personas && c.personas.includes(persona) &&
+                !c.personas.includes('generic') &&
+                c.type !== 'doomsday' && c.type !== 'angel'
+            );
+            if (pool.length === 0) pool = cards.filter(c =>
+                (!c.personas || c.personas.includes('generic')) &&
+                c.type !== 'doomsday' && c.type !== 'angel'
+            );
         } else {
-            pool = cards.filter(c => (!c.personas || c.personas.includes('generic')) && !c.tags.includes('doomsday') && !c.tags.includes('angel'));
+            pool = cards.filter(c =>
+                (!c.personas || c.personas.includes('generic')) &&
+                c.type !== 'doomsday' && c.type !== 'angel'
+            );
         }
     }
 
@@ -68,12 +78,9 @@ function evaluateState(pillars) {
     const minVal = Math.min(pillars.bandwidth, pillars.salary, pillars.reputation, pillars.life);
     const avgVal = (pillars.bandwidth + pillars.salary + pillars.reputation + pillars.life) / 4;
 
-    // Penalize death heavily
     if (minVal <= 0) return -1000;
 
-    // Bonus for promotion eligibility (2 > 70)
     const above70 = Object.values(pillars).filter(v => v > 70).length;
-
     return (minVal * 10) + avgVal + (above70 * 20);
 }
 
@@ -90,53 +97,43 @@ function makeDecision(card, pillars) {
 // --- Simulation Loop ---
 
 function runGame(persona) {
-    // Generate Random Stats (Total 225)
-    // Redistribution method to match game logic
-    const TOTAL = 225;
-    let pillars = [Math.random(), Math.random(), Math.random(), Math.random()];
-    const sum = pillars.reduce((a, b) => a + b, 0);
-    pillars = pillars.map(p => Math.round((p / sum) * TOTAL));
-
-    // Fix rounding
-    const currentSum = pillars.reduce((a, b) => a + b, 0);
-    pillars[0] += (TOTAL - currentSum);
-
-    // Naive clamp check (if random distribution is too wild, just reset to avoid edge cases in sim)
-    // In actual game we might want better logic, but this is fine for Monte Carlo
-    if (pillars.some(p => p < 20 || p > 90)) {
-        pillars = [56, 56, 56, 57]; // Fallback if too extreme
+    // Start at balanced state matching game engine (swap-based initialisation)
+    const values = [50, 50, 50, 50];
+    for (let i = 0; i < 10; i++) {
+        const giver = Math.floor(Math.random() * 4);
+        const receiver = Math.floor(Math.random() * 4);
+        if (giver === receiver) continue;
+        if (values[giver] >= 35 && values[receiver] <= 65) {
+            values[giver] -= 5;
+            values[receiver] += 5;
+        }
     }
 
     let state = {
         week: 1,
-        pillars: { bandwidth: pillars[0], salary: pillars[1], reputation: pillars[2], life: pillars[3] },
-        persona: persona,
+        pillars: { bandwidth: values[0], salary: values[1], reputation: values[2], life: values[3] },
+        persona,
         decisionHistory: [],
         recentCardIds: [],
         status: 'playing'
     };
 
     while (state.status === 'playing') {
-        // Draw Card
         const card = selectCard(data, state.recentCardIds, state.decisionHistory, state.week, state.persona);
-        if (!card) break; // Error
+        if (!card) break;
 
-        // Decide
         const choice = makeDecision(card, state.pillars);
         const selectedChoice = choice === 'left' ? card.leftChoice : card.rightChoice;
 
-        // Apply
         state.pillars = applyEffects(state.pillars, selectedChoice.effects);
-        state.decisionHistory.push({ cardId: card.id, week: state.week }); // Simplified history record
+        state.decisionHistory.push({ cardId: card.id, week: state.week });
         state.recentCardIds.push(card.id);
         state.week++;
 
-        // Checks
-        // Immediate Promotion Mode
-        const above70 = Object.values(state.pillars).filter(v => v > 70).length; // 70% Check
+        const above70 = Object.values(state.pillars).filter(v => v > 70).length;
         const below30 = Object.values(state.pillars).filter(v => v < 30).length;
 
-        if (state.week >= 40 && above70 >= 2 && below30 === 0) { // Week 40 Check
+        if (state.week >= 40 && above70 >= 2 && below30 === 0) {
             state.status = 'promoted';
             state.reason = 'stats-check';
             break;
@@ -147,7 +144,7 @@ function runGame(persona) {
             state.status = 'game-over';
             state.reason = zeroPillar;
         } else if (state.week > 52) {
-            state.status = 'game-over'; // Stagnation
+            state.status = 'game-over';
             state.reason = 'stagnation';
         }
     }
@@ -156,7 +153,15 @@ function runGame(persona) {
 
 // --- Main ---
 
-const personas = ['developer', 'product-manager', 'analyst', 'business-associate'];
+const personas = [
+    'developer',
+    'product-manager',
+    'analyst',
+    'business-associate',
+    'consultant',
+    'marketing-manager',
+    'operations-associate',
+];
 const ITERATIONS = 1000;
 
 console.log(`Running ${ITERATIONS} simulations per persona...`);

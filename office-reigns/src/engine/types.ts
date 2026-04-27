@@ -84,12 +84,11 @@ export function getPillarStatus(value: number): PillarStatus {
 // Default promotion settings
 export const DEFAULT_PROMOTION_SETTINGS: PromotionSettings = {
   minWeek: 40, // Can be eligible for promotion after week 40
-  minPillarsAbove60: 2, // Need 2 pillars above 70%
+  minPillarsAbove60: 2, // Need 2 pillars above 70% (field name is historical)
   maxPillarsBelow30: 0,
   mode: 'immediate', // Win as soon as criteria are met
 };
 
 // Constants
 export const MAX_WEEK = 52; // One year to get promoted
-export const RECENT_CARDS_LIMIT = 52; // Track all cards played in session
 export const PROMOTION_TAG = 'promotion-opportunity';

@@ -2,14 +2,8 @@
 
 import { getPillarStatus, type PillarType } from '../../engine/types';
 import { useGame } from '../hooks/useGame';
+import { PILLAR_EMOJIS } from '../constants';
 import './GameOverScreen.css';
-
-const PILLAR_EMOJIS: Record<PillarType, string> = {
-    bandwidth: '⚡',
-    salary: '💰',
-    reputation: '⭐',
-    life: '❤️',
-};
 
 export function GameOverScreen() {
     const { gameState, goToIntro } = useGame();

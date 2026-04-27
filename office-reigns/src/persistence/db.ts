@@ -89,14 +89,6 @@ export async function getAllCards(): Promise<Card[]> {
 }
 
 /**
- * Get cards by track (IC or Manager)
- */
-export async function getCardsByTrack(track: 'IC' | 'Manager'): Promise<Card[]> {
-    const db = await getDB();
-    return db.getAllFromIndex('cards', 'by-track', track);
-}
-
-/**
  * Get a single card by ID
  */
 export async function getCard(id: string): Promise<Card | undefined> {
@@ -238,12 +230,3 @@ export async function seedCards(seedData: Card[]): Promise<void> {
     await importCards(seedData, 'replace');
 }
 
-// ==================== Export Operations ====================
-
-/**
- * Export all cards as JSON
- */
-export async function exportCardsAsJson(): Promise<string> {
-    const cards = await getAllCards();
-    return JSON.stringify(cards, null, 2);
-}

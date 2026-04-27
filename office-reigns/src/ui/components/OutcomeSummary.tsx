@@ -1,6 +1,7 @@
 // Outcome summary overlay with pillar effects
 
-import type { Effect, PillarType } from '../../engine/types';
+import type { Effect } from '../../engine/types';
+import { PILLAR_EMOJIS, PILLAR_LABELS } from '../constants';
 import './OutcomeSummary.css';
 
 interface OutcomeSummaryProps {
@@ -8,20 +9,6 @@ interface OutcomeSummaryProps {
     effects: Effect[];
     onContinue: () => void;
 }
-
-const PILLAR_EMOJIS: Record<PillarType, string> = {
-    bandwidth: '⚡',
-    salary: '💰',
-    reputation: '⭐',
-    life: '❤️',
-};
-
-const PILLAR_LABELS: Record<PillarType, string> = {
-    bandwidth: 'Bandwidth',
-    salary: 'Salary',
-    reputation: 'Reputation',
-    life: 'Life',
-};
 
 export function OutcomeSummary({ outcome, effects, onContinue }: OutcomeSummaryProps) {
     return (
