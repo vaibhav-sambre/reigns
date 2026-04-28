@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: office-reigns-server
+    runtime: node
+    rootDir: office-reigns/server
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: NODE_ENV
+        value: production

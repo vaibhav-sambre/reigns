@@ -55,7 +55,7 @@ export async function getDB(): Promise<IDBPDatabase<OfficeReignsDB>> {
 
 // ==================== Card Operations ====================
 
-const API_BASE_URL = 'https://reigns-8of4.onrender.com/api';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? 'https://reigns-8of4.onrender.com/api';
 
 /**
  * Get all cards from the database (sync with server first if possible)
