@@ -1,59 +1,156 @@
-.pillar-bar {
-    margin-bottom: 1rem;
+/* ─── Pillar Bar ──────────────────────────────────────────────────────────── */
+
+@keyframes pillarPulse {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.55; }
 }
 
+@keyframes criticalFlash {
+    0%, 100% { box-shadow: 0 0 6px var(--bar-color, #ef4444); }
+    50%       { box-shadow: 0 0 18px var(--bar-color, #ef4444), 0 0 32px var(--bar-color, #ef4444); }
+}
+
+@keyframes deltaFloat {
+    0%   { opacity: 1; transform: translateY(0) scale(1); }
+    80%  { opacity: 0.9; transform: translateY(-22px) scale(0.9); }
+    100% { opacity: 0; transform: translateY(-30px) scale(0.8); }
+}
+
+.pillar-bar {
+    margin-bottom: 0.85rem;
+    position: relative;
+}
+
+/* ── Header row ────────────────────────────────────────────────────────────── */
 .pillar-bar__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 0.375rem;
+    margin-bottom: 0.35rem;
+}
+
+.pillar-bar__meta {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.pillar-bar__emoji {
+    font-size: 0.95rem;
+    line-height: 1;
 }
 
 .pillar-bar__label {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: #e2e8f0;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #94a3b8;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
+}
+
+.pillar-bar__right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.pillar-bar__value {
+    font-family: var(--font-mono, 'JetBrains Mono', monospace);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #e2e8f0;
+    min-width: 2.4rem;
+    text-align: right;
 }
 
 .pillar-bar__status {
-    font-size: 0.75rem;
+    font-size: 0.68rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    padding: 0.1rem 0.45rem;
+    border-radius: 0.3rem;
+    border: 1px solid currentColor;
+    opacity: 0.9;
 }
 
+/* ── Track ─────────────────────────────────────────────────────────────────── */
 .pillar-bar__track {
     position: relative;
-    height: 12px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 6px;
-    overflow: hidden;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 5px;
+    overflow: visible;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 .pillar-bar__fill {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0; left: 0;
     height: 100%;
-    border-radius: 6px;
-    transition: width 0.5s ease-out, background-color 0.3s ease;
-    box-shadow: 0 0 8px currentColor;
+    border-radius: 5px;
+    transition: width 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+                background-color 0.4s ease;
+    box-shadow: 0 0 8px var(--bar-color, currentColor),
+                0 0 2px rgba(255, 255, 255, 0.3);
 }
 
+/* Shine stripe on the fill */
+.pillar-bar__fill::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 40%;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 5px 5px 0 0;
+}
+
+/* Critical pulse */
+.pillar-bar--critical .pillar-bar__fill {
+    animation: criticalFlash 1s ease-in-out infinite;
+}
+
+/* Low pulse (gentler) */
+.pillar-bar--low .pillar-bar__fill {
+    animation: pillarPulse 1.8s ease-in-out infinite;
+}
+
+/* ── Threshold markers ─────────────────────────────────────────────────────── */
 .pillar-bar__markers {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
 }
 
 .pillar-bar__marker {
     position: absolute;
-    top: 0;
-    width: 1px;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.2);
+    top: -2px; bottom: -2px;
+    width: 1.5px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 1px;
 }
+
+/* Danger (30%) and promo (70%) markers are highlighted */
+.pillar-bar__marker--danger {
+    background: rgba(239, 68, 68, 0.4);
+    width: 2px;
+}
+.pillar-bar__marker--promo {
+    background: rgba(34, 197, 94, 0.4);
+    width: 2px;
+}
+
+/* ── Delta tooltip ─────────────────────────────────────────────────────────── */
+.pillar-bar__delta {
+    position: absolute;
+    right: 0;
+    top: -1.4rem;
+    font-family: var(--font-mono, 'JetBrains Mono', monospace);
+    font-size: 0.72rem;
+    font-weight: 700;
+    pointer-events: none;
+    animation: deltaFloat 1.2s ease-out forwards;
+}
+
+.pillar-bar__delta--positive { color: #22c55e; }
+.pillar-bar__delta--negative { color: #ef4444; }

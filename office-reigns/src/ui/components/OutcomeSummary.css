@@ -1,133 +1,143 @@
+/* ─── Outcome Summary Overlay ─────────────────────────────────────────────── */
+
+@keyframes overlayIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes outcomeCardIn {
+    from { opacity: 0; transform: translateY(28px) scale(0.95); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
 .outcome-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(8px);
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 100;
-    animation: fadeIn 0.3s ease;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
+    z-index: 200;
+    padding: 1.5rem;
+    animation: overlayIn 0.22s ease both;
 }
 
 .outcome-card {
-    background: linear-gradient(145deg,
-            rgba(30, 41, 59, 0.95) 0%,
-            rgba(15, 23, 42, 0.98) 100%);
-    border: 1px solid rgba(148, 163, 184, 0.2);
+    background: rgba(10, 16, 32, 0.96);
+    border: 1.5px solid rgba(74, 158, 255, 0.2);
     border-radius: 1.5rem;
-    padding: 2.5rem;
-    max-width: 500px;
-    width: 90%;
+    padding: 2rem 1.75rem;
+    max-width: 460px;
+    width: 100%;
     text-align: center;
     box-shadow:
-        0 25px 50px -12px rgba(0, 0, 0, 0.5),
-        0 0 0 1px rgba(255, 255, 255, 0.05);
-    animation: slideUp 0.3s ease;
-}
-
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+        0 32px 64px -16px rgba(0,0,0,0.8),
+        0 0 40px rgba(74,158,255,0.08),
+        inset 0 1px 0 rgba(255,255,255,0.05);
+    backdrop-filter: blur(24px);
+    animation: outcomeCardIn 0.3s var(--ease-out, cubic-bezier(0.16,1,0.3,1)) both;
 }
 
 .outcome-card__icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    margin-bottom: 0.6rem;
+    display: block;
 }
 
 .outcome-card__title {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 700;
-    color: #f1f5f9;
-    margin: 0 0 1rem;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0 0 0.75rem;
 }
 
 .outcome-card__text {
-    font-size: 1.125rem;
-    line-height: 1.75;
-    color: #94a3b8;
-    margin: 0 0 2rem;
-}
-
-.outcome-card__button {
-    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
-    border: none;
-    border-radius: 0.75rem;
-    padding: 1rem 2rem;
     font-size: 1rem;
-    font-weight: 600;
-    color: white;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    line-height: 1.75;
+    color: #cbd5e1;
+    margin: 0 0 1.5rem;
 }
 
-.outcome-card__button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.4);
-}
-
-/* Pillar Effects */
+/* ── Effects chips ─────────────────────────────────────────────────────────── */
 .outcome-card__effects {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.75rem;
+    gap: 0.5rem;
     margin-bottom: 1.5rem;
 }
 
 .outcome-card__effect {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.625rem 1rem;
+    gap: 0.35rem;
+    padding: 0.4rem 0.8rem;
     border-radius: 2rem;
-    font-size: 0.9rem;
-    font-weight: 600;
+    font-size: 0.82rem;
+    font-weight: 700;
+    font-family: var(--font-mono, 'JetBrains Mono', monospace);
+    animation: slideUp 0.3s var(--ease-out, cubic-bezier(0.16,1,0.3,1)) both;
 }
 
+.outcome-card__effect:nth-child(1) { animation-delay: 0.05s; }
+.outcome-card__effect:nth-child(2) { animation-delay: 0.10s; }
+.outcome-card__effect:nth-child(3) { animation-delay: 0.15s; }
+.outcome-card__effect:nth-child(4) { animation-delay: 0.20s; }
+
 .outcome-card__effect--positive {
-    background: rgba(34, 197, 94, 0.2);
-    border: 1px solid rgba(34, 197, 94, 0.4);
+    background: rgba(34,197,94,0.15);
+    border: 1px solid rgba(34,197,94,0.3);
     color: #86efac;
 }
 
 .outcome-card__effect--negative {
-    background: rgba(239, 68, 68, 0.2);
-    border: 1px solid rgba(239, 68, 68, 0.4);
+    background: rgba(239,68,68,0.15);
+    border: 1px solid rgba(239,68,68,0.3);
     color: #fca5a5;
 }
 
-.outcome-card__effect-emoji {
-    font-size: 1.1rem;
-}
-
-.outcome-card__effect-label {
-    font-weight: 500;
-}
+.outcome-card__effect-emoji  { font-size: 1rem; }
+.outcome-card__effect-label  { font-weight: 500; font-family: var(--font-sans, inherit); }
 
 .outcome-card__effect-delta {
-    font-weight: 700;
-    min-width: 2rem;
+    font-weight: 800;
+    min-width: 2.5rem;
     text-align: right;
+    letter-spacing: -0.02em;
+}
+
+/* ── CTA ───────────────────────────────────────────────────────────────────── */
+.outcome-card__button {
+    background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+    border: none;
+    border-radius: 0.875rem;
+    padding: 0.875rem 2rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    font-family: inherit;
+    color: white;
+    cursor: pointer;
+    transition: all 0.22s var(--ease-out, cubic-bezier(0.16,1,0.3,1));
+    box-shadow: 0 4px 16px rgba(37,99,235,0.3);
+    letter-spacing: -0.01em;
+    position: relative;
+    overflow: hidden;
+}
+
+.outcome-card__button::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.1) 50%, transparent 60%);
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+}
+.outcome-card__button:hover::after { transform: translateX(100%); }
+
+.outcome-card__button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(37,99,235,0.45);
 }

@@ -8,14 +8,12 @@ import './GameOverScreen.css';
 export function GameOverScreen() {
     const { gameState, goToIntro } = useGame();
 
-    if (!gameState || gameState.status !== 'game-over') {
-        return null;
-    }
+    if (!gameState || gameState.status !== 'game-over') return null;
 
     return (
         <div className="game-over-screen">
             <div className="game-over-card">
-                <div className="game-over-card__icon">💀</div>
+                <span className="game-over-card__icon">💀</span>
                 <h1 className="game-over-card__title">Career Over</h1>
 
                 <div className="game-over-card__narrative">
@@ -27,18 +25,20 @@ export function GameOverScreen() {
                         <span className="game-over-card__stat-label">Weeks Survived</span>
                         <span className="game-over-card__stat-value">{gameState.week - 1}</span>
                     </div>
+
                     <div className="game-over-card__pillars">
                         {(Object.keys(gameState.pillars) as PillarType[]).map((pillar) => {
-                            const value = gameState.pillars[pillar];
+                            const value  = gameState.pillars[pillar];
                             const status = getPillarStatus(value);
                             return (
                                 <div key={pillar} className="game-over-card__pillar">
                                     <span className="game-over-card__pillar-emoji">
                                         {PILLAR_EMOJIS[pillar]}
                                     </span>
-                                    <span
-                                        className={`game-over-card__pillar-status game-over-card__pillar-status--${status.toLowerCase()}`}
-                                    >
+                                    <span className="game-over-card__pillar-value">
+                                        {Math.round(value)}
+                                    </span>
+                                    <span className={`game-over-card__pillar-status game-over-card__pillar-status--${status.toLowerCase()}`}>
                                         {status}
                                     </span>
                                 </div>
@@ -48,7 +48,7 @@ export function GameOverScreen() {
                 </div>
 
                 <button className="game-over-card__button" onClick={goToIntro}>
-                    🔄 Start New Run
+                    ↩ Start New Run
                 </button>
             </div>
         </div>

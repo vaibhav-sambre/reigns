@@ -1,23 +1,32 @@
-// Promotion screen component
+// Promotion screen component — with confetti and pillar values
 
 import { getPillarStatus, type PillarType } from '../../engine/types';
 import { useGame } from '../hooks/useGame';
 import { PILLAR_EMOJIS } from '../constants';
 import './PromotionScreen.css';
 
+// 24 confetti pieces — purely presentational divs
+function Confetti() {
+    return (
+        <div className="confetti-container" aria-hidden="true">
+            {Array.from({ length: 24 }, (_, i) => (
+                <div key={i} className="confetti-piece" />
+            ))}
+        </div>
+    );
+}
+
 export function PromotionScreen() {
     const { gameState, goToIntro } = useGame();
 
-    if (!gameState || gameState.status !== 'promoted') {
-        return null;
-    }
+    if (!gameState || gameState.status !== 'promoted') return null;
 
     return (
         <div className="promotion-screen">
-            <div className="promotion-card">
-                <div className="promotion-card__confetti" />
+            <Confetti />
 
-                <div className="promotion-card__icon">🎉</div>
+            <div className="promotion-card">
+                <span className="promotion-card__icon">🏆</span>
                 <h1 className="promotion-card__title">Promoted!</h1>
                 <h2 className="promotion-card__subtitle">You're now a Manager</h2>
 
@@ -30,18 +39,20 @@ export function PromotionScreen() {
                         <span className="promotion-card__stat-label">Weeks to Promotion</span>
                         <span className="promotion-card__stat-value">{gameState.week - 1}</span>
                     </div>
+
                     <div className="promotion-card__pillars">
                         {(Object.keys(gameState.pillars) as PillarType[]).map((pillar) => {
-                            const value = gameState.pillars[pillar];
+                            const value  = gameState.pillars[pillar];
                             const status = getPillarStatus(value);
                             return (
                                 <div key={pillar} className="promotion-card__pillar">
                                     <span className="promotion-card__pillar-emoji">
                                         {PILLAR_EMOJIS[pillar]}
                                     </span>
-                                    <span
-                                        className={`promotion-card__pillar-status promotion-card__pillar-status--${status.toLowerCase()}`}
-                                    >
+                                    <span className="promotion-card__pillar-value">
+                                        {Math.round(value)}
+                                    </span>
+                                    <span className={`promotion-card__pillar-status promotion-card__pillar-status--${status.toLowerCase()}`}>
                                         {status}
                                     </span>
                                 </div>
@@ -51,11 +62,11 @@ export function PromotionScreen() {
                 </div>
 
                 <div className="promotion-card__coming-soon">
-                    <p>Manager Stage Coming Soon!</p>
+                    <p>✨ Manager Stage — Coming Soon</p>
                 </div>
 
                 <button className="promotion-card__button" onClick={goToIntro}>
-                    🔄 Play Again
+                    ↩ Play Again
                 </button>
             </div>
         </div>
