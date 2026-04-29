@@ -2,13 +2,16 @@
  * Office Reigns — Rich Audio Engine
  *
  * Multi-voice synthesiser using Web Audio API:
- *  • 4-voice chord pads  (sine, slow attack/release)
- *  • Arpeggiated melody  (triangle, brighter)
- *  • Walking bass line   (sine sub)
+ *  • 4-voice chord pads  (oscillator type per theme)
+ *  • Arpeggiated melody  (oscillator type per theme)
+ *  • Walking bass line   (triangle sub)
  *  • Pseudo-reverb via generated convolver impulse
- *  • Danger mode: dissonant, tense variation
+ *  • Danger mode: dissonant, tense variation (overrides theme chords)
+ *  • Theme system: 4 distinct musical identities
  *  • 5 distinct sound effects
  */
+
+import type { AudioThemeConfig } from '../ui/theme';
 
 // ── Singleton state ──────────────────────────────────────────────────────────
 let audioCtx: AudioContext | null = null;
@@ -17,11 +20,13 @@ let reverbNode: ConvolverNode | null = null;
 let dryGain: GainNode | null = null;
 let wetGain: GainNode | null = null;
 
-let musicGain: GainNode | null = null;
 let musicTimeout: number | null = null;
 let isMusicPlaying = false;
 let isDangerMode = false;
 let currentChordIndex = 0;
+
+// Active theme audio config (set by setAudioTheme)
+let activeTheme: AudioThemeConfig | null = null;
 
 // ── Init ─────────────────────────────────────────────────────────────────────
 function initAudio() {
@@ -39,7 +44,7 @@ function initAudio() {
         wetGain = audioCtx.createGain();
         wetGain.gain.value = 0.3;
 
-        reverbNode = buildReverb(audioCtx, 1.8);
+        reverbNode = buildReverb(audioCtx, activeTheme?.reverbDuration ?? 1.8);
         wetGain.connect(reverbNode);
         reverbNode.connect(masterGain);
 
@@ -64,46 +69,32 @@ function buildReverb(ctx: AudioContext, durationSec: number): ConvolverNode {
     return node;
 }
 
-// ── Music Theory ──────────────────────────────────────────────────────────────
+// ── Default (fallback) music data ─────────────────────────────────────────────
+// Used when no theme has been set yet (e.g. first load before theme selection)
 
-// A-minor jazz progression  (A2 / A3 / A4 / A5 octave)
-// Am7 | Fmaj7 | Cmaj7 | Em7
-const CHORDS_NORMAL = [
-    // Am7  (A C E G)
-    [110.00, 130.81, 164.81, 196.00],
-    // Fmaj7 (F A C E)
-    [87.31,  110.00, 130.81, 164.81],
-    // Cmaj7 (C E G B)
-    [65.41,   82.41, 98.00, 123.47],
-    // Em7  (E G B D)
-    [82.41,   98.00, 123.47, 146.83],
+const DEFAULT_CHORDS: number[][] = [
+    [110.00, 130.81, 164.81, 196.00],  // Am7
+    [87.31,  110.00, 130.81, 164.81],  // Fmaj7
+    [65.41,   82.41,  98.00, 123.47],  // Cmaj7
+    [82.41,   98.00, 123.47, 146.83],  // Em7
 ];
 
-// Melody — A minor pentatonic (A B C E G), 8 quarter notes per chord pair
-const MELODY = [
-    // Am7
+const DEFAULT_MELODY: number[] = [
     440.00, 523.25, 659.25, 523.25,
-    // Fmaj7
     698.46, 659.25, 523.25, 440.00,
-    // Cmaj7
     523.25, 587.33, 659.25, 587.33,
-    // Em7
     659.25, 587.33, 523.25, 392.00,
 ];
 
-// Danger variation — dissonant, half-diminished
-const CHORDS_DANGER = [
-    // Adim7 (A C Eb Gb) — tense
-    [110.00, 130.81, 155.56, 185.00],
-    // Dm7b5 (D F Ab C)
-    [73.42, 87.31, 103.83, 130.81],
-    // Bbmaj7 (Bb D F A)
-    [58.27, 73.42, 87.31, 110.00],
-    // E7b9  (E G# B D F) — very tense
-    [82.41, 103.83, 123.47, 146.83],
+// Danger variation — dissonant, half-diminished (overrides theme chords)
+const CHORDS_DANGER: number[][] = [
+    [110.00, 130.81, 155.56, 185.00],  // Adim7
+    [73.42, 87.31, 103.83, 130.81],    // Dm7b5
+    [58.27, 73.42, 87.31, 110.00],     // Bbmaj7
+    [82.41, 103.83, 123.47, 146.83],   // E7b9
 ];
 
-const DANGER_MELODY = [
+const DANGER_MELODY: number[] = [
     349.23, 369.99, 329.63, 311.13,
     293.66, 311.13, 329.63, 349.23,
     369.99, 392.00, 369.99, 349.23,
@@ -140,7 +131,7 @@ function tone(
 
     osc.connect(env);
     env.connect(dest);
-    env.connect(reverbSend);   // also feed reverb
+    env.connect(reverbSend);
 
     osc.start(start);
     osc.stop(start + duration + 0.01);
@@ -179,54 +170,106 @@ function scheduleMeasure() {
     const ctx = audioCtx;
     const dry = dryGain;
     const wet = wetGain;
-    const chords = isDangerMode ? CHORDS_DANGER : CHORDS_NORMAL;
-    const melody = isDangerMode ? DANGER_MELODY : MELODY;
-    const bpm = isDangerMode ? 115 : 82;
+
+    // Danger overrides theme
+    const chords  = isDangerMode ? CHORDS_DANGER   : (activeTheme?.chords  ?? DEFAULT_CHORDS);
+    const melody  = isDangerMode ? DANGER_MELODY   : (activeTheme?.melody  ?? DEFAULT_MELODY);
+    const bpm     = isDangerMode ? 115             : (activeTheme?.bpm     ?? 82);
+    const padType: OscillatorType = isDangerMode ? 'sawtooth' : (activeTheme?.padType   ?? 'sine');
+    const melType: OscillatorType = isDangerMode ? 'sawtooth' : (activeTheme?.melodyType ?? 'triangle');
+
     const beat = 60 / bpm;
     const bar  = beat * 4;
 
-    const now = ctx.currentTime;
+    const now   = ctx.currentTime;
     const chord = chords[currentChordIndex % chords.length];
     const melOffset = (currentChordIndex % chords.length) * 4;
 
-    // ── Pad chords (2× per bar, gentle stabs) ──────────────────────────────
+    // ── Pad chords (2 stabs per bar) ──────────────────────────────────────
     chord.forEach(f => {
-        tone(ctx, dry, wet, f * 2, now,          bar * 0.9, 'sine', isDangerMode ? 0.12 : 0.1, 0.08, 0.4);
-        tone(ctx, dry, wet, f * 2, now + beat * 2, beat * 1.8, 'sine', isDangerMode ? 0.10 : 0.08, 0.06, 0.3);
+        tone(ctx, dry, wet, f * 2, now,              bar  * 0.9, padType, isDangerMode ? 0.12 : 0.10, 0.08, 0.40);
+        tone(ctx, dry, wet, f * 2, now + beat * 2,   beat * 1.8, padType, isDangerMode ? 0.10 : 0.08, 0.06, 0.30);
     });
 
-    // ── Bass (root on beat 1, fifth on beat 3) ──────────────────────────────
+    // ── Bass (root beat 1, fifth beat 3) ─────────────────────────────────
     const root  = chord[0];
     const fifth = chord[2] ?? chord[1];
-    tone(ctx, dry, wet, root,  now,              beat * 0.85, 'triangle', 0.35, 0.02, 0.2);
-    tone(ctx, dry, wet, fifth, now + beat * 2,   beat * 0.85, 'triangle', 0.25, 0.02, 0.2);
+    tone(ctx, dry, wet, root,  now,            beat * 0.85, 'triangle', 0.35, 0.02, 0.20);
+    tone(ctx, dry, wet, fifth, now + beat * 2, beat * 0.85, 'triangle', 0.25, 0.02, 0.20);
 
-    // ── Melody (4 quarter notes spread across the bar) ─────────────────────
+    // ── Melody (4 quarter notes per bar) ─────────────────────────────────
     for (let i = 0; i < 4; i++) {
         const mfreq = melody[(melOffset + i) % melody.length];
-        tone(ctx, dry, wet, mfreq, now + beat * i, beat * 0.75,
-            isDangerMode ? 'sawtooth' : 'triangle',
+        tone(ctx, dry, wet, mfreq, now + beat * i, beat * 0.75, melType,
             isDangerMode ? 0.12 : 0.09, 0.01, 0.15);
     }
 
-    // ── Light hi-hat (beat 2 & 4 in danger, beats 2/4 softer in normal) ────
+    // ── Percussion pattern (varies by tempo feel) ─────────────────────────
     if (isDangerMode) {
-        noiseBurst(ctx, dry, now + beat,           0.05, 0.08);
-        noiseBurst(ctx, dry, now + beat * 3,       0.05, 0.10);
+        // Stressed off-beats
+        noiseBurst(ctx, dry, now + beat,       0.05, 0.08);
+        noiseBurst(ctx, dry, now + beat * 3,   0.05, 0.10);
+    } else if (bpm >= 120) {
+        // Fast themes: 4-on-the-floor kick-feel hi-hats
+        for (let i = 0; i < 4; i++) {
+            noiseBurst(ctx, dry, now + beat * i, 0.04, 0.07, 5000);
+        }
+    } else if (bpm >= 90) {
+        // Mid-tempo: swing hi-hats on 2 & 4
+        noiseBurst(ctx, dry, now + beat * 1,   0.04, 0.05, 6000);
+        noiseBurst(ctx, dry, now + beat * 3,   0.04, 0.05, 6000);
     } else {
-        noiseBurst(ctx, dry, now + beat * 1.5,     0.04, 0.04, 6000);
-        noiseBurst(ctx, dry, now + beat * 3.5,     0.04, 0.04, 6000);
+        // Slow/lofi: gentle ghost notes
+        noiseBurst(ctx, dry, now + beat * 1.5, 0.04, 0.03, 6000);
+        noiseBurst(ctx, dry, now + beat * 3.5, 0.04, 0.03, 6000);
     }
 
     currentChordIndex++;
 
-    const lookahead = bar * 1000 - 80; // schedule slightly before next bar
+    const lookahead = bar * 1000 - 80;
     musicTimeout = window.setTimeout(scheduleMeasure, lookahead);
 }
 
 // ── Public API ────────────────────────────────────────────────────────────────
 
 export type SoundType = 'select' | 'swipe' | 'game-over' | 'promote';
+
+/**
+ * Call this when the player selects a theme (before or during gameplay).
+ * Restarts music immediately with new theme parameters.
+ */
+export function setAudioTheme(config: AudioThemeConfig) {
+    const wasPlaying = isMusicPlaying;
+
+    // Update mix levels on live nodes if they exist
+    if (dryGain) dryGain.gain.value = config.dryMix;
+    if (wetGain) wetGain.gain.value = config.wetMix;
+    if (masterGain) masterGain.gain.value = 0.55 * config.volume;
+
+    activeTheme = config;
+
+    // Rebuild reverb for the new tail length
+    if (audioCtx && reverbNode) {
+        const newReverb = buildReverb(audioCtx, config.reverbDuration);
+        wetGain?.disconnect();
+        newReverb.connect(masterGain!);
+        wetGain?.connect(newReverb);
+        reverbNode = newReverb;
+    }
+
+    if (wasPlaying) {
+        // Restart music to pick up new chords/tempo immediately
+        stopBackgroundMusic();
+        isMusicPlaying = true;
+        currentChordIndex = 0;
+        try {
+            initAudio();
+            scheduleMeasure();
+        } catch (e) {
+            console.warn('Theme music restart failed', e);
+        }
+    }
+}
 
 export function playSound(type: SoundType) {
     try {
@@ -235,13 +278,11 @@ export function playSound(type: SoundType) {
 
         switch (type) {
             case 'select': {
-                // Soft "tick" — sine chirp
-                tone(ctx, dry, wet, 880, now,        0.08, 'sine', 0.4,  0.005, 0.07);
-                tone(ctx, dry, wet, 1320, now + 0.05, 0.06, 'sine', 0.25, 0.005, 0.05);
+                tone(ctx, dry, wet, 880,  now,         0.08, 'sine', 0.4,  0.005, 0.07);
+                tone(ctx, dry, wet, 1320, now + 0.05,  0.06, 'sine', 0.25, 0.005, 0.05);
                 break;
             }
             case 'swipe': {
-                // Satisfying whoosh — pitched noise sweep
                 const osc = ctx.createOscillator();
                 const env = ctx.createGain();
                 osc.type = 'sawtooth';
@@ -252,36 +293,31 @@ export function playSound(type: SoundType) {
                 env.gain.exponentialRampToValueAtTime(0.0001, now + 0.22);
                 osc.connect(env); env.connect(dry); env.connect(wet);
                 osc.start(now); osc.stop(now + 0.25);
-
                 noiseBurst(ctx, dry, now, 0.18, 0.08, 800);
                 break;
             }
             case 'game-over': {
-                // Diminished descent — dramatic
                 const notes = [392.00, 369.99, 349.23, 311.13, 293.66];
                 notes.forEach((f, i) => {
-                    tone(ctx, dry, wet, f, now + i * 0.28, 0.35, 'triangle', 0.28, 0.01, 0.25);
-                    tone(ctx, dry, wet, f / 2, now + i * 0.28, 0.35, 'sine', 0.15, 0.01, 0.3);
+                    tone(ctx, dry, wet, f,     now + i * 0.28, 0.35, 'triangle', 0.28, 0.01, 0.25);
+                    tone(ctx, dry, wet, f / 2, now + i * 0.28, 0.35, 'sine',     0.15, 0.01, 0.30);
                 });
-                // Low rumble
                 tone(ctx, dry, wet, 55, now + 0.6, 0.8, 'sine', 0.3, 0.05, 0.5);
                 break;
             }
             case 'promote': {
-                // Joyful ascending fanfare
-                const fanfare = [
+                const fanfare: [number, number, number][] = [
                     [523.25, 0.00, 0.12],
                     [659.25, 0.12, 0.12],
                     [783.99, 0.24, 0.12],
-                    [1046.50, 0.36, 0.4],
-                    [880.00, 0.76, 0.15],
-                    [1046.50, 0.91, 0.6],
-                ] as [number, number, number][];
+                    [1046.50, 0.36, 0.40],
+                    [880.00,  0.76, 0.15],
+                    [1046.50, 0.91, 0.60],
+                ];
                 fanfare.forEach(([f, off, dur]) => {
                     tone(ctx, dry, wet, f,     now + off, dur, 'square',   0.18, 0.01, 0.08);
                     tone(ctx, dry, wet, f / 2, now + off, dur, 'triangle', 0.12, 0.02, 0.15);
                 });
-                // Chime shimmer
                 for (let i = 0; i < 6; i++) {
                     const cf = 1000 + Math.random() * 1400;
                     tone(ctx, dry, wet, cf, now + 0.05 * i, 0.4, 'sine', 0.06, 0.005, 0.3);
@@ -294,26 +330,14 @@ export function playSound(type: SoundType) {
     }
 }
 
-export function startBackgroundMusic(danger = false) {
-    if (isMusicPlaying && isDangerMode === danger) return;
-
-    isDangerMode = danger;
-
-    if (isMusicPlaying) {
-        // Switch mode without full restart — just update flag (takes effect next measure)
-        return;
-    }
+export function startBackgroundMusic() {
+    if (isMusicPlaying) return;
 
     isMusicPlaying = true;
     currentChordIndex = 0;
 
     try {
         const { ctx } = initAudio();
-        if (!musicGain) {
-            musicGain = ctx.createGain();
-            musicGain.gain.value = 1;
-            // musicGain is not actually used in tone() — kept for future fade control
-        }
         if (ctx.state === 'suspended') ctx.resume();
         scheduleMeasure();
     } catch (e) {
