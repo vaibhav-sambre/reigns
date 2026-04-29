@@ -11402,7 +11402,7 @@
           "delta": -5
         }
       ],
-      "outcomeText": "// TODO: Fix this later. (Narrator: They never fixed it)."
+      "outcomeText": "You push the setTimeout. It works. You leave a comment: `// TODO: fix properly`. Three months later it is still there, and two more timeouts have joined it."
     },
     "rightChoice": {
       "label": "Find root cause",
