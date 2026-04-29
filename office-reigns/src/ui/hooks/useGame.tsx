@@ -9,7 +9,7 @@ import {
     useState,
     type ReactNode,
 } from 'react';
-import type { Card, Effect, GameState, PromotionSettings, Persona, CharacterNames } from '../../engine/types';
+import type { Card, Effect, GameState, Persona, CharacterNames } from '../../engine/types';
 import { DEFAULT_CHARACTER_NAMES } from '../../engine/utils';
 import {
     createInitialState,
